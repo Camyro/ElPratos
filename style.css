@@ -1,47 +1,372 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root{
+  --cor-de-fundo: #212729;
+  --cor-de-fundo-meio-transparente: rgba(33, 39, 41, 50%);
+  --cor-da-div: #353A3C;
+  --cor-do-separador: rgba(134, 142, 150, 20%);
+  --cor-principal: #5ADCFF;
+
+  --cor-do-texto: #fff;
+  --cor-do-texto-secundaria: #868E96;
+
+  --tamanho-da-lateral: 300px;
+
+  --borda: 10px 15px 20px rgba(0, 0, 0, 25%);
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  color: var(--cor-do-texto);
 }
 
-html, body, .tela{
+html{
   width: 100%;
   height: 100%;
+  background-color: var(--cor-de-fundo);
+  background-image: url(./imgs/Icon\ Grid.svg);
 }
 
-.tela{
+body{
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header{
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 4%;
+  transition: 1s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(50px);
+  background-color: var(--cor-de-fundo-meio-transparente);
+  z-index: 1;
+}
+
+.nav.rolagem{
+  padding: 10px 4%;
+}
+
+.div-logo{
+  display: flex;
+  align-items: center;
+}
+
+.div-logo p{
+  font-size: 25px;
+}
+
+.logo{
+  margin: 0px;
+  height: 50px;
+}
+
+.hamburger {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+.hamburger span {
+  transition: all 0.3s ease-in-out;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+}
+
+.menu li {
+  padding: 10px;
+  text-align: center;
+  transition: 10s;
+}
+
+.menu li:hover a, .menu li:hover span{
+  color: var(--cor-principal);
+}
+
+.menu span {
+  display: none;
+  transition: 1s;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 1s;
+}
+
+.espaco{
+  margin: 130px 0px 0px 0px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.prato{
+  width: 60vw;
+  height: auto;
+  position: relative;
+  top: 20%;
+  left: 20%;
+  z-index: -1;
+  animation: surgir-baixo 2s 1s forwards;
+}
+
+.titulo2{
+  position: relative;
+  top: 15vh;
+  left: 35px;
+  font-size: 85px;
+  line-height: 0.6;
+  z-index: 0;
+  animation: surgir-esquerdo 2s 1s forwards;
+}
+
+.titulo3{
+  position: relative;
+  top: 18vh;
+  left: calc(0% - 35px);
+  font-size: 50px;
+  line-height: 1.2;
+  text-align: end;
+  z-index: 0;
+  animation: surgir-direito 2s 1s forwards;
+}
+
+g{
+  font-size: 25px;
+}
+
+c{
+  color: var(--cor-principal);
+}
+
+.tela1, .div-base{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.div-base{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.div-secundaria{
+  display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #212729;
 }
 
-h1{
-  font-size: 45px;
-  color: #fff;
-  margin: 30px;
-}
-
-.botao{
-  color: #5ADCFF;
-  background-color: rgba(90, 220, 255, 10%);
-  border-radius: 50px;
-  text-decoration: none;
-  margin: 10px;
+.div-selecao{
+  width: var(--tamanho-da-lateral);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  height: auto;
-  padding: 15px;
-  font-size: 18px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 28px 0;
 }
 
-p{
-  color: #858585;
-  font-size: 13px;
+.div-selecao-interna{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.img-selecao{
+  margin: 0 0 0 10px;
+}
+
+.div-total{
+  width: var(--tamanho-da-lateral);
+  height: 207px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--cor-da-div);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 0 20px 0;
+  box-shadow: var(--borda);
+}
+
+.div-total-interna{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0 0 20px 0;
+}
+
+.separador, .separador-tudo{
+  width: 95vw;
+  height: 3px;
+  border-radius: 10px;
+  background-color: var(--cor-do-separador);
+  margin: 50px 0;
+}
+
+.s1{
+  width: var(--tamanho-da-lateral)!important;
+}
+
+.s2{
+  display: none;
+  margin: 10px 0px!important;
+  width: 100%!important;
+}
+
+.s3{
+  margin: 100px 0px 0px 0px!important;
+}
+
+.div-base .separador{
+  display: none;
+}
+
+.titulo{
+  font-size: 40px;
+  text-align: center;
+}
+
+d{
+  color: var(--cor-do-texto-secundaria);
+}
+
+p, th, td{
+  font-size: 15px;
+}
+
+.titulo-total, .antes-total{
+  font-size: 20px;
+}
+
+.depois-total{
+  font-size: 30px;
+}
+
+.legenda{
+  padding: 0px 20px;
+  text-align: center;
+}
+
+.tela2{
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  display: flex;
+  background-color: var(--cor-da-div);
+  border-radius: 20px;
+  padding: 10px;
+  justify-content: center;
+  margin: 28px 10px;
+  box-shadow: var(--borda);
+}
+
+th, td{
+  text-align: left;
+  padding: 8px;
+  color: #fff;
+  text-justify: center;
+}
+
+th {
+  color: #5ADCFF;
+}
+
+tr{
+  display: table-row;
+}
+
+.numero{
+  background-color: rgba(134, 142, 150, 10%);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px!important;
+  margin: 5px;
+}
+
+.center{
+  text-align: center;
+  align-items: center;
+}
+
+.nome{
+  width: 220px;
+}
+
+.didi{
+  width: 10px;
+}
+
+.mr-t-menu{
+  margin-top: 100px;
+}
+
+#Proposta1{
+  animation: surgir-esquerdo 2s 1s forwards;
+}
+
+#Proposta2{
+  animation: surgir-direito 2s 1s forwards;
+}
+
+#TabelaDePreço{
+  animation: surgir-esquerdo 2s 1s forwards;
+}
+
+#TabelaDeDesconto{
+  animation: surgir-direito 2s 1s forwards;
 }
