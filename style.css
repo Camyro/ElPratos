@@ -111,29 +111,51 @@ header{
   margin: 0;
   padding: 0;
   transition: 0.5s;
+  align-items: center;
 }
 
 .menu li {
   padding: 10px;
   text-align: center;
   transition: 10s;
+  align-items: center;
+  margin: 0px 20px;
 }
 
-.menu li:hover a, .menu li:hover span{
+.menu li:hover a, .menu li:hover i{
   color: var(--cor-principal);
 }
 
-.menu span {
+.menu i{
   display: none;
   transition: 1s;
+  margin: 0px 5px;
+  font-size: 24px;
 }
 
-.menu li a {
+.menu li a, .botao p{
   color: white;
   text-decoration: none;
   font-size: 20px;
   transition: 1s;
 }
+
+.botao{
+  padding: 15px;
+  background-color: var(--cor-principal);
+  color: #fff;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.botao i{
+  display: flex;
+  margin: 0px 5px;
+  font-size: 28px;
+}
+
+
 
 .espaco{
   margin: 130px 0px 0px 0px;
