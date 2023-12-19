@@ -126,6 +126,10 @@ header{
   color: var(--cor-principal);
 }
 
+.botao:hover i{
+  color: #fff!important;
+}
+
 .menu i{
   display: none;
   transition: 1s;
