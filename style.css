@@ -71,7 +71,7 @@ body::-webkit-scrollbar-thumb {
 
 header{
   height: auto;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
