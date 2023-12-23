@@ -6,7 +6,7 @@ const link5 = document.querySelector(".link5");
 const link6 = document.querySelector(".link6");
 const link7 = document.querySelector(".link7");
 const link8 = document.querySelector(".link8");
-const link8 = document.querySelector(".link9");
+const link9 = document.querySelector(".link9");
 
 hamburger.addEventListener("click", function() {
   evento();
