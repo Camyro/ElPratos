@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --cor-de-fundo: #212729;
+  --cor-de-fundo-meio-transparente: rgba(33, 39, 41, 50%);
+  --cor-da-div: #353A3C;
+  --cor-do-separador: rgba(134, 142, 150, 20%);
+  --cor-principal: #5ADCFF;
+  --cor-verde: #06D572;
+  --cor-vermelho: #D50606;
+
+  --cor-do-texto: #fff;
+  --cor-do-texto-secundaria: #868E96;
+
+  --tamanho-da-lateral: 300px;
+
+  --borda: 10px 15px 20px rgba(0, 0, 0, 25%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html{
+  background-image: url(./imgs/Icon\ Grid.svg);
+  color: var(--cor-do-texto)!important;
+  background-color: var(--cor-de-fundo);
+}
+
+body{
+  margin: 20px 5vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+span{
+  color: var(--cor-do-texto)!important;
+}
+
+a{
+  color: var(--cor-principal)!important;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--cor-da-div);
+  border-radius: 20px;
+  border: 3.5px solid var(--cor-de-fundo);
+}
+
+.menu::-webkit-scrollbar-track {
+  background: rgba(0 0 0 0%);
+}
+
+.menu::-webkit-scrollbar {
+  width: 10px;
+}
+
+.menu::-webkit-scrollbar-thumb {
+  background-color: var(--cor-da-div);
+  border-radius: 20px;
+  border: 3.5px solid var(--cor-de-fundo);
+}
+
+.menu::-webkit-scrollbar-track {
+  background: rgba(0 0 0 0%);
+}
