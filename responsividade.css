@@ -126,6 +126,32 @@
   .div-contato a{
     font-size: 15px;
   }
+
+  .titulo2{
+    font-size: 45px;
+  }
+
+  .titulo3{
+    font-size: 30px;
+  }
+
+  g{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .titulo2{
+    font-size: 45px!important;
+  }
+
+  .titulo3{
+    font-size: 30px!important;
+  }
+
+  g{
+    font-size: 15px!important;
+  }
 }
 
 @media (max-width: 800px) { 
@@ -255,18 +281,14 @@
   }
 }
 
-#Proposta1{
+.e{
   animation: surgir-esquerdo 2s 1s forwards;
 }
 
-#Proposta2{
+.d{
   animation: surgir-direito 2s 1s forwards;
 }
 
-#TabelaDePreço{
-  animation: surgir-esquerdo 2s 1s forwards;
-}
-
-#TabelaDeDesconto{
-  animation: surgir-direito 2s 1s forwards;
+.b{
+  animation: surgir-baixo 2s 1s forwards;
 }

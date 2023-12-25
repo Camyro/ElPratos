@@ -194,7 +194,6 @@ header{
   top: 20%;
   left: 20%;
   z-index: -1;
-  animation: surgir-baixo 2s 1s forwards;
 }
 
 .titulo2{
@@ -204,7 +203,6 @@ header{
   font-size: 85px;
   line-height: 0.6;
   z-index: 0;
-  animation: surgir-esquerdo 2s 1s forwards;
 }
 
 .titulo3{
@@ -215,7 +213,6 @@ header{
   line-height: 1.2;
   text-align: end;
   z-index: 0;
-  animation: surgir-direito 2s 1s forwards;
 }
 
 g{
