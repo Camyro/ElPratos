@@ -184,7 +184,7 @@ setInterval(function() {
 
 function enviar(){
   if(link != ""){
-    link = "https://elpratos.camyrocamyro.repl.co/mensagem/" + link
+    link = "https://elpratos.vercel.app/mensagem/" + link
     window.location.href = link;
   } else{
     document.getElementById("invalido").innerHTML = "Nenhum item foi adicionado";
