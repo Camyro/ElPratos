@@ -385,16 +385,55 @@ tr{
   align-items: center;
 }
 
+input{
+  background-color: var(--cor-de-fundo-meio-transparente);
+  border: none;
+  padding: 5px;
+  width: 55px;
+  border-radius: 10px;
+}
+
 .nome{
-  width: 220px;
+  width: 260px;
 }
 
 .didi{
   width: 10px;
 }
 
+.quant{
+  text-align: center;
+}
+
 .mr-t-menu{
   margin-top: 100px;
+}
+
+.enviar button{
+  cursor: pointer;
+  text-align: center;
+  width: fit-content;
+  display: flex;
+  background-color: var(--cor-principal);
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+}
+
+.enviar{
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 50px 0;
+}
+
+.enviar span{
+  padding: 0 0 0 5px;
+  font-size: 25px;
+}
+
+#invalido{
+  color: var(--cor-vermelho);
+  padding: 0 0 10px 0;
 }
 
 footer{

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsividade.css">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWP28VFFV4"></script>
     <script>
@@ -75,14 +77,20 @@
 
         <li class="s2"><div class="separador s2"></div></li>
         <li>
+          <i class="fa-solid fa-calculator"></i>
+          <a href="#Simulador" class="link8">Simulador</a>
+        </li>
+
+        <li class="s2"><div class="separador s2"></div></li>
+        <li>
           <i class="fa-solid fa-question"></i>
-          <a href="./informaçoes" class="link8">Informações das louças</a>
+          <a href="./informaçoes" class="link9">Informações das louças</a>
         </li>
         
         <li class="s2"><div class="separador s2"></div></li>
         <li>
           <i class="fa-solid fa-phone ico-font-size-20px"></i>
-          <a href="#Contatos" class="link9">Contatos</a>
+          <a href="#Contatos" class="link10">Contatos</a>
         </li>
       </ul>
     </header>
@@ -306,6 +314,99 @@
       </section>
     </main>
 
+    <main class="tela3" id="Simulador">
+      <section class="div-base">
+        <div class="div-secundaria e" id="TabelaDePreço">
+          <h1 class="titulo mr-t-menu">Simulador <br>de Preço</h1>
+
+          <table>
+           <tr>
+              <th class="numero">N°</th>
+              <th class="nome">Nome</th>
+              <th class="center">Quant</th>
+              <th class="center">Ttl R$</th>
+           </tr>
+           <tr>
+              <td class="numero">1</td>
+              <td>Prato</td>
+              <td class="center quant"><input type="number" id="inp-Prato" class="quant"></td>
+              <td class="center"  id="text-Prato">1,80</td>
+           </tr>
+           <tr>
+              <td class="numero">2</td>
+              <td>Faca inox</td>
+              <td class="center quant"><input type="number" id="inp-Faca" class="quant"></td>
+              <td class="center"  id="text-Faca">0,90</td>
+           </tr>
+           <tr>
+              <td class="numero">3</td>
+              <td>Garfo inox</td>
+              <td class="center quant"><input type="number" id="inp-Garfo" class="quant"></td>
+              <td class="center"  id="text-Garfo">0,90</td>
+           </tr>
+           <tr>
+              <td class="numero">4</td>
+              <td>Colher inox</td>
+              <td class="center quant"><input type="number" id="inp-Colher" class="quant"></td>
+              <td class="center"  id="text-Colher">1,80</td>
+           </tr>
+           <tr>
+              <td class="numero">5</td>
+              <td>Taça de vidro</td>
+              <td class="center quant"><input type="number"  id="inp-TaçaDeVidro" class="quant"></td>
+              <td class="center"  id="text-TaçaDeVidro">1,80</td>
+           </tr>
+           <tr>
+              <td class="numero">6</td>
+              <td>Trav. de vidro</td>
+              <td class="center quant"><input type="number" id="inp-TravessaDeVidro" class="quant"></td>
+              <td class="center"  id="text-TravessaDeVidro">10,00</td>
+            </tr>
+            <tr>
+              <td class="numero">7</td>
+              <td>Trav. de porcelanato</td>
+              <td class="center quant"><input type="number" id="inp-TravessaDePorcelanato" class="quant"></td>
+              <td class="center"  id="text-TravessaDePorcelanato">15,00</td>
+            </tr>
+            <tr>
+              <td class="numero">8</td>
+              <td>Rechaud</td>
+              <td class="center quant"><input type="number"  id="inp-Rechaud" class="quant"></td>
+              <td class="center"  id="text-Rechaud">20,00</td>
+            </tr>
+            <tr>
+              <td class="numero">9</td>
+              <td>Colher de servir</td>
+              <td class="center quant"><input type="number"  id="inp-ColherDeServi" class="quant"></td>
+              <td class="center"  id="text-ColherDeServi">3,00</td>
+            </tr>
+            <tr>
+              <td class="numero">10</td>
+              <td class="nome">Xicara e pires</td>
+              <td class="center quant"><input type="number"  id="inp-XicaraEPires" class="quant"></td>
+              <td class="center"  id="text-XicaraEPires">5,00</td>
+            </tr>
+            <tr>
+              <td class="numero">11</td>
+              <td class="nome">Totais</td>
+              <td class="center quant" id="ttl-quant">0</td>
+              <td class="center" id="ttl-var">0</td>
+            </tr>
+          </table>
+
+          <p id="invalido"></p>
+
+          <div class="enviar">
+            <button onclick="enviar()">
+              <p>Alugar essa quantidade via WhatsApp</p>
+              <span class="material-symbols-outlined">send</span>
+            </button>
+          </div>
+          <div class="separador s3"></div>
+        </div>
+      </section>
+    </main>
+    
     <footer id="Contatos" class="b">
       <div class="rodape">
         <div class="div-interna">
@@ -353,6 +454,7 @@
   
     <script src="hamburger.js"></script>
     <script src="links.js"></script>
+    <script src="script.js"></script>
     
     <script src="https://kit.fontawesome.com/c4b8acf6d2.js" crossorigin="anonymous"></script>
   </body>

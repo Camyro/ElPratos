@@ -31,7 +31,7 @@
   }
 }
 
-@media (max-width: 1150px) { 
+@media (max-width: 1350px) { 
   .menu {
     display: flex;
     position: absolute;
