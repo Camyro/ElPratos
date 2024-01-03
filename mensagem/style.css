@@ -42,11 +42,17 @@ body::-webkit-scrollbar-thumb {
   border: 3.5px solid var(--cor-de-fundo);
 }
 
-main{
+.p1{
   padding: 20px 100px;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.p1.n{
+  display: none;
 }
 
 .titulo{
@@ -117,6 +123,24 @@ span{
   margin: 0!important;
 }
 
+.p2{
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.p2.n{
+  display: flex;
+}
+
+.p2 span{
+  font-size: 80px;
+}
+
 footer{
   display: flex;
   align-items: center;
@@ -174,14 +198,12 @@ footer{
   margin: 10px 0 0 0;
 }
 
-.mar-2-10px{
-  margin: 10px 10px 0 0;
+svg{
+  margin: 0 10px 0 0;
 }
 
-.botao i{
-  display: flex;
-  font-size: 25px;
-  padding: 0 10px;
+.mar-2-10px{
+  margin: 10px 10px 0 0;
 }
 
 .ico-font-size-20px{
