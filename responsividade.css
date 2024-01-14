@@ -193,7 +193,6 @@
     top: 20%;
     left: 15%;
     z-index: -1;
-    animation: surgir-baixo 2s 1s forwards;
   }
 }
 
@@ -205,7 +204,6 @@
     top: 20%;
     left: 10%;
     z-index: -1;
-    animation: surgir-baixo 2s 1s forwards;
   }
 }
 
@@ -217,7 +215,6 @@
     top: 20%;
     left: 5%;
     z-index: -1;
-    animation: surgir-baixo 2s 1s forwards;
   }
 }
 
@@ -229,7 +226,6 @@
     top: 20%;
     left: 20%;
     z-index: -1;
-    animation: surgir-baixo 2s 1s forwards;
   }
 }
 
@@ -241,7 +237,6 @@
     top: 20%;
     left: 20%;
     z-index: -1;
-    animation: surgir-baixo 2s 1s forwards;
   }
 }
 
@@ -253,7 +248,6 @@
     top: 20%;
     left: 15%;
     z-index: -1;
-    animation: surgir-baixo 2s 1s forwards;
   }
 }
 
@@ -265,7 +259,6 @@
     top: 20%;
     left: 10%;
     z-index: -1;
-    animation: surgir-baixo 2s 1s forwards;
   }
 }
 
@@ -277,6 +270,5 @@
     top: 20%;
     left: 5%;
     z-index: -1;
-    animation: surgir-baixo 2s 1s forwards;
   }
 }
