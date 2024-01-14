@@ -280,15 +280,3 @@
     animation: surgir-baixo 2s 1s forwards;
   }
 }
-
-.e{
-  animation: surgir-esquerdo 2s 1s forwards;
-}
-
-.d{
-  animation: surgir-direito 2s 1s forwards;
-}
-
-.b{
-  animation: surgir-baixo 2s 1s forwards;
-}
