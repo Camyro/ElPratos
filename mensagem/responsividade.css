@@ -91,3 +91,32 @@
     padding: 20px 50px;
   }
 }
+
+@media (width > 550px) {
+  .links-column {
+    text-align: left;
+  }
+
+  footer section.top .links {
+    grid-template-columns: repeat(2, 1fr);
+    margin-right: 50px;
+  }
+
+  footer section.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
+    text-align: left;
+  }
+
+  footer section.top .socials {
+    left: 0;
+    translate: 0% 10px;
+  }
+
+  footer section.top > img{
+    margin: 0 0 50px;
+  }
+}
