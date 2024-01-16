@@ -526,15 +526,12 @@ footer section p {
 }
 
 footer section.top .socials {
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  translate: -50% 0;
   display: flex;
   align-items: center;
   gap: 12px;
   height: 56px;
   margin-top: 5px;
+  justify-content: center;
 }
 
 footer section.top .socials > a {
@@ -546,8 +543,4 @@ footer section.top .socials > a {
   display: grid;
   place-items: center;
   border-radius: 50%;
-}
-
-.socials-column :is(h2, p) {
-  display: none;
 }

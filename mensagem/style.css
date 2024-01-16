@@ -148,10 +148,6 @@ footer {
   padding-top: 60px;
 }
 
-svg{
-  color: #fff;
-}
-
 footer a{
   color: var(--cor-do-texto-secundaria);
 }
@@ -234,15 +230,12 @@ footer section p {
 }
 
 footer section.top .socials {
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  translate: -50% 0;
   display: flex;
   align-items: center;
   gap: 12px;
   height: 56px;
   margin-top: 5px;
+  justify-content: center;
 }
 
 footer section.top .socials > a {
@@ -256,6 +249,6 @@ footer section.top .socials > a {
   border-radius: 50%;
 }
 
-.socials-column :is(h2, p) {
-  display: none;
+svg{
+  color: #fff;
 }
