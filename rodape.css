@@ -114,7 +114,7 @@ svg{
   color: #fff;
 }
 
-@media (width > 550px) {
+@media (width > 600px) {
   .footerCel{
     display: flex;
   }
@@ -147,7 +147,7 @@ svg{
   }
 }
 
-@media (width >= 640px) {
+@media (width >= 700px) {
   .footerCel{
     display: flex;
   }

@@ -33,11 +33,12 @@ element.innerHTML = `
             <h2>Paginas</h2>
             <a href="https://elpratos.vercel.app/">Pagina principal</a>
             <a href="https://elpratos.vercel.app/fotos">Fotos das louças</a>
+            <a href="https://elpratos.vercel.app/sobre">Perguntas e sobre</a>
             <a href="https://elpratos.vercel.app/#TabelaDePreço">Tabela de Preço</a>
-            <a href="https://elpratos.vercel.app/#TabelaDeDesconto">Tabela de Desconto</a>
           </div>
           <div class="links-column">
             <h2 class="footerCel">Paginas</h2>
+            <a href="https://elpratos.vercel.app/#TabelaDeDesconto">Tabela de Desconto</a>
             <a href="https://elpratos.vercel.app/#Simulador">Simulador</a>
           </div>
       <div class="links-column socials-column" id="Contatos">
@@ -59,7 +60,8 @@ element.innerHTML = `
       <a href="https://c1studios.com.br/" class="Dono">C1Studios</a>
       <a class="Dono">&</a>
       <a href="https://elpratos.vercel.app/" class="Dono">El Pratos</a>
-      <a href="https://elpratos.vercel.app/terms/" class="Dono">Termos</a>
-      <a href="https://elpratos.vercel.app/privacy/" class="Dono">Privacidade</a>
+      <a href="https://elpratos.vercel.app/sobre" class="Dono">Sobre</a>
+      <a href="https://elpratos.vercel.app/terms" class="Dono">Termos</a>
+      <a href="https://elpratos.vercel.app/privacy" class="Dono">Privacidade</a>
     </div>
   </section>`;
