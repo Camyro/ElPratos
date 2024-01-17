@@ -11,6 +11,10 @@ const link10 = document.querySelector(".link10");
 const link11 = document.querySelector(".link11");
 const link12 = document.querySelector(".link12");
 const link13 = document.querySelector(".link13");
+const link14 = document.querySelector(".link14");
+const link15 = document.querySelector(".link15");
+const link16 = document.querySelector(".link16");
+const link17 = document.querySelector(".link17");
 
 hamburger.addEventListener("click", function() {
   evento();
@@ -65,5 +69,21 @@ link12.addEventListener("click", function() {
 });
 
 link13.addEventListener("click", function() {
+  evento();
+});
+
+link14.addEventListener("click", function() {
+  evento();
+});
+
+link15.addEventListener("click", function() {
+  evento();
+});
+
+link16.addEventListener("click", function() {
+  evento();
+});
+
+link17.addEventListener("click", function() {
   evento();
 });
