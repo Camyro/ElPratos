@@ -403,3 +403,7 @@ footer section.top .socials > a {
   place-items: center;
   border-radius: 50%;
 }
+
+svg{
+  color: #fff;
+}

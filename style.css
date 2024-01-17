@@ -512,7 +512,7 @@ footer section p {
 }
 
 .legal > a {
-  margin: 0 0 0 4px;
+  margin: 0 0 0 10px;
 }
 
 .legal,
@@ -543,4 +543,8 @@ footer section.top .socials > a {
   display: grid;
   place-items: center;
   border-radius: 50%;
+}
+
+svg{
+  color: #fff;
 }
