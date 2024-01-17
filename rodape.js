@@ -11,21 +11,21 @@ element.innerHTML = `
             <a href="https://elpratos.vercel.app/fotos/#Colher">Colher</a>
           </div>
           <div class="links-column">
-            <h2>Fotos</h2>
+            <h2 class="footerCel">Fotos</h2>
             <a href="https://elpratos.vercel.app/fotos/#Ta%C3%A7aDeVidro">Taça de vidro</a>
             <a href="https://elpratos.vercel.app/fotos/#XicaraEPires">Xicara e pires</a>
             <a href="https://elpratos.vercel.app/fotos#Jarra">Jarra</a>
             <a href="https://elpratos.vercel.app/fotos/#TravessaDeVidro">Travessa de vidro</a>
           </div>
           <div class="links-column">
-            <h2>Fotos</h2>
+            <h2 class="footerCel">Fotos</h2>
             <a href="https://elpratos.vercel.app/fotos/#TravessaDePorcelanato">Travessa de porcelanato</a>
             <a href="https://elpratos.vercel.app/fotos/#Rechaud">Rechaud</a>
             <a href="https://elpratos.vercel.app/fotos/#ColherDeServir1">Colher de servir 2</a>
             <a href="https://elpratos.vercel.app/fotos/#ColherDeServir2">Colher de servir 2</a>
           </div>
           <div class="links-column">
-            <h2>Fotos</h2>
+            <h2 class="footerCel">Fotos</h2>
             <a href="https://elpratos.vercel.app/fotos#ColherDeSuco">Colher de suco</a>
             <a href="https://elpratos.vercel.app/fotos/#Pin%C3%A7aParaAlimenta%C3%A7%C3%A3o">Pinça para alimentação</a>
           </div>
@@ -37,7 +37,7 @@ element.innerHTML = `
             <a href="https://elpratos.vercel.app/#TabelaDeDesconto">Tabela de Desconto</a>
           </div>
           <div class="links-column">
-            <h2>Paginas</h2>
+            <h2 class="footerCel">Paginas</h2>
             <a href="https://elpratos.vercel.app/#Simulador">Simulador</a>
           </div>
       <div class="links-column socials-column" id="Contatos">
