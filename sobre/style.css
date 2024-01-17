@@ -176,6 +176,7 @@ header{
 
 .s2{
   width: calc(80vw - 60px)!important;
+  display: none;
 }
 
 .capa{
