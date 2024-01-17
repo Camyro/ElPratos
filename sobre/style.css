@@ -104,13 +104,17 @@ main h1{
 }
 
 main h2{
-  font-size: 28px;
+  font-size: 26px;
 }
 
-main p, ul li{
+main h3{
+  font-size: 22px;
+}
+
+main p, ol li{
   font-size: 16px;
 }
 
-main ul{
-  list-style: auto;
+main ol ol{
+  padding: 0 0 0 15px;
 }
