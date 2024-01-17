@@ -36,7 +36,7 @@
 
   .menu.show li{
     display: flex;
-    width: calc(80vw -60px);
+    width: calc(80vw - 60px);
     align-items: center;
   }
 
