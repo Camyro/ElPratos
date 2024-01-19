@@ -295,7 +295,7 @@ c{
 }
 
 .s1{
-  width: var(--tamanho-da-lateral)!important;
+  width: 95vw!important;
 }
 
 .s2{
@@ -361,7 +361,7 @@ th, td{
 }
 
 th {
-  color: #5ADCFF;
+  color: var(--cor-principal);
 }
 
 tr{
@@ -423,7 +423,7 @@ input{
 
 .enviar{
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin: 0 0 50px 0;
 }
 
@@ -435,4 +435,16 @@ input{
 #invalido{
   color: var(--cor-vermelho);
   padding: 0 0 10px 0;
+}
+
+.div-base-img{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+
+.img-calc{
+  width: 350px;
+  margin: 0 25px;
 }

@@ -6,15 +6,19 @@ const URL = new URLSearchParams(window.location.search);
 console.log(URL);
 
 const Prato = URL.get("Prato");
+const PratoDeSobremesas = URL.get("PratoDeSobremesas");
 const Faca = URL.get("Faca");
 const Garfo = URL.get("Garfo");
 const Colher = URL.get("Colher");
 const TaçaDeVidro = URL.get("TaçaDeVidro");
+const CopoDeVidro = URL.get("CopoDeVidro");
+const XicaraEPires = URL.get("XicaraEPires");
+const JarraEColherDeSuco = URL.get("JarraEColherDeSuco");
 const TravessaDeVidro = URL.get("TravessaDeVidro");
 const TravessaDePorcelanato = URL.get("TravessaDePorcelanato");
 const Rechaud = URL.get("Rechaud");
 const ColherDeServi = URL.get("ColherDeServi");
-const XicaraEPires = URL.get("XicaraEPires");
+const PegadorParaAlimentacao = URL.get("PegadorParaAlimentacao");
 mensagemW = "";
 
 nome = document.getElementById("nome").value;
@@ -26,6 +30,12 @@ if (Prato >= 1){
   var TPrato = "Prato: " + Prato;
   mensagemW = mensagemW + "%0A" + TPrato.replace(/\s/g, "%20");
   document.getElementById("Prato").innerHTML = TPrato;
+}
+
+if (PratoDeSobremesas >= 1){
+  var TPratoDeSobremesas = "Prato de sobremesas: " + PratoDeSobremesas;
+  mensagemW = mensagemW + "%0A" + TPratoDeSobremesas.replace(/\s/g, "%20");
+  document.getElementById("PratoDeSobremesas").innerHTML = TPratoDeSobremesas;
 }
 
 if (Faca >= 1){
@@ -52,6 +62,24 @@ if (TaçaDeVidro >= 1){
   document.getElementById("TaçaDeVidro").innerHTML = TTaçaDeVidro;
 }
 
+if (CopoDeVidro >= 1){
+  var TCopoDeVidro = "Copo de vidro: " + CopoDeVidro;
+  mensagemW = mensagemW + "%0A" + TCopoDeVidro.replace(/\s/g, "%20");
+  document.getElementById("CopoDeVidro").innerHTML = TCopoDeVidro;
+}
+
+if (XicaraEPires >= 1){
+  var TXicaraEPires = "Xicara e pires: " + XicaraEPires;
+  mensagemW = mensagemW + "%0A" + TXicaraEPires.replace(/\s/g, "%20");
+  document.getElementById("XicaraEPires").innerHTML = TXicaraEPires;
+}
+
+if (JarraEColherDeSuco >= 1){
+  var TJarraEColherDeSuco = "Jarra e colher de suco: " + JarraEColherDeSuco;
+  mensagemW = mensagemW + "%0A" + TJarraEColherDeSuco.replace(/\s/g, "%20");
+  document.getElementById("JarraEColherDeSuco").innerHTML = TJarraEColherDeSuco;
+}
+
 if (TravessaDeVidro >= 1){
   var TTravessaDeVidro = "Travessa de vidro: " + TravessaDeVidro;
   mensagemW = mensagemW + "%0A" + TTravessaDeVidro.replace(/\s/g, "%20");
@@ -76,10 +104,10 @@ if (ColherDeServi >= 1){
   document.getElementById("ColherDeServi").innerHTML = TColherDeServi;
 }
 
-if (XicaraEPires >= 1){
-  var TXicaraEPires = "Xicara e pires: " + XicaraEPires;
-  mensagemW = mensagemW + "%0A" + TXicaraEPires.replace(/\s/g, "%20");
-  document.getElementById("XicaraEPires").innerHTML = TXicaraEPires;
+if (PegadorParaAlimentacao >= 1){
+  var TPegadorParaAlimentacao = "Pegador para alimentação: " + PegadorParaAlimentacao;
+  mensagemW = mensagemW + "%0A" + TPegadorParaAlimentacao.replace(/\s/g, "%20");
+  document.getElementById("PegadorParaAlimentacao").innerHTML = TPegadorParaAlimentacao;
 }
 
 const p1 = document.querySelector(".p1");
