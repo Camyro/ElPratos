@@ -121,7 +121,7 @@ if(mensagemW == ""){
 mensagemW = mensagem.replace(/\s/g, "%20") + "%0A" + mensagemW;
 
 setInterval(function() {
-  mensagem = "";
+  mensagemW = "";
 
   nome = document.getElementById("nome").value;
 
