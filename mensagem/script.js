@@ -120,19 +120,13 @@ if(mensagemW == ""){
 
 mensagemW = mensagem.replace(/\s/g, "%20") + "%0A" + mensagemW;
 
-setInterval(function() {
-  nome = document.getElementById("nome").value;
 
-  var mensagem = "Olá, meu nome é " + nome.trim() + ", gostaria de alugar os seguintes itens:"
-  document.getElementById("txt").innerHTML = mensagem;
-
-  mensagemW = mensagem.replace(/\s/g, "%20") + "%0A" + mensagemW;
-}, 1); // 1000 milissegundos = 1 segundo
 
 function enviar(){
   if(nome.replace(/\s/g, "") == "" || nome.replace(/\s/g, "").toLowerCase() == "seu nome".replace(/\s/g, "") || nome.replace(/\s/g, "").toLowerCase() == "nome".replace(/\s/g, "")){
     document.getElementById("invalido").innerHTML = "Nome não informado";
   } else{
+    mensagemW = mensagem.replace(/\s/g, "%20") + "%0A" + mensagemW;
     mensagemW = "https://api.whatsapp.com/send?phone=5595991275451&text=" + mensagemW;
     document.getElementById("invalido").innerHTML = "";
     window.location.href = mensagemW;
