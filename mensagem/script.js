@@ -118,9 +118,12 @@ if(mensagemW == ""){
   p2.classList.toggle("n");
 }
 
-mensagemW = mensagem.replace(/\s/g, "%20") + "%0A" + mensagemW;
+setInterval(function() {
+  nome = document.getElementById("nome").value;
 
-
+  var mensagem = "Olá, meu nome é " + nome.trim() + ", gostaria de alugar os seguintes itens:"
+  document.getElementById("txt").innerHTML = mensagem;
+}, 1); // 1000 milissegundos = 1 segundo
 
 function enviar(){
   if(nome.replace(/\s/g, "") == "" || nome.replace(/\s/g, "").toLowerCase() == "seu nome".replace(/\s/g, "") || nome.replace(/\s/g, "").toLowerCase() == "nome".replace(/\s/g, "")){
