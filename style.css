@@ -368,18 +368,6 @@ tr{
   display: table-row;
 }
 
-.numero{
-  background-color: rgba(134, 142, 150, 10%);
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px!important;
-  margin: 5px;
-}
-
 .center{
   text-align: center;
   align-items: center;
