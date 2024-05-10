@@ -127,8 +127,6 @@ setInterval(function() {
   document.getElementById("txt").innerHTML = mensagem;
 
   mensagemW = mensagem.replace(/\s/g, "%20") + "%0A" + mensagemW;
-
-  mensagemW = "";
 }, 1); // 1000 milissegundos = 1 segundo
 
 function enviar(){
