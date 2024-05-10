@@ -121,14 +121,14 @@ if(mensagemW == ""){
 mensagemW = mensagem.replace(/\s/g, "%20") + "%0A" + mensagemW;
 
 setInterval(function() {
-  mensagemW = "";
-
   nome = document.getElementById("nome").value;
 
   var mensagem = "Olá, meu nome é " + nome.trim() + ", gostaria de alugar os seguintes itens:"
   document.getElementById("txt").innerHTML = mensagem;
 
   mensagemW = mensagem.replace(/\s/g, "%20") + "%0A" + mensagemW;
+
+  mensagemW = "";
 }, 1); // 1000 milissegundos = 1 segundo
 
 function enviar(){
