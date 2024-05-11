@@ -232,6 +232,10 @@ c{
   margin-bottom: 10px;
 }
 
+.tela1, a{
+  text-decoration: none;
+}
+
 .div-base{
   display: flex;
   flex-direction: row;
