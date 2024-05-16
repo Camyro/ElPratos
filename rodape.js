@@ -21,7 +21,7 @@ element.innerHTML = `
             <h2 class="footerCel">Fotos</h2>
             <a href="https://elpratos.vercel.app/fotos/#TravessaDePorcelanato">Travessa de porcelanato</a>
             <a href="https://elpratos.vercel.app/fotos/#Rechaud">Rechaud</a>
-            <a href="https://elpratos.vercel.app/fotos/#ColherDeServir1">Colher de servir 2</a>
+            <a href="https://elpratos.vercel.app/fotos/#ColherDeServir1">Colher de servir 1</a>
             <a href="https://elpratos.vercel.app/fotos/#ColherDeServir2">Colher de servir 2</a>
           </div>
           <div class="links-column">
