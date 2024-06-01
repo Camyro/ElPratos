@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="responsividade.css">
     <link rel="stylesheet" href="rodape.css">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <!-- Google tag (gtag.js) -->
@@ -148,128 +150,30 @@
     <div class="espaco">
       <p class="titulo2">El Pratos <br><g>Alugueis de <c>louças</c></g></p>
       <p class="titulo3">Louças <c>para <br>qualquer evento</c></p>
-      <img src="./imgs/Prato.svg" alt="Um prato" class="prato">
+      <img src="./imgs/Prato.svg" alt="Um prato" class="prato" data-aos="fade-up" data-aos-duration="3000">
     </div>
 
     <div class="desfoque"></div>
-    
-    <main class="tela1" id="Propostas">
-      <section class="div-base">
-        <div class="div-secundaria" id="Proposta1">
-          <h1 class="titulo mr-t-menu">Proposta 1<br>de Aluguel</h1>
-            
-          <div class="div-selecao">
-            <div class="div-selecao-interna">
-              <img class="img-selecao" src="./imgs/Check.svg">
-              <p class="text-selecao"><d>Prato - R$ 1,50</d></p>
-            </div>
-      
-            <div class="div-selecao-interna">
-              <img class="img-selecao" src="./imgs/Check.svg">
-              <p class="text-selecao"><d>Garfo - R$ 0,75</d></p>
-            </div>
-      
-            <div class="div-selecao-interna">
-              <img class="img-selecao" src="./imgs/Check.svg">
-              <p class="text-selecao"><d>Faca -  R$ 0,75</d></p>
-            </div>
-      
-            <div class="div-selecao-interna">
-              <img class="img-selecao" src="./imgs/Check.svg">
-              <p class="text-selecao"><d>Colher -  R$ 1,50</d></p>
-            </div>
-      
-            <div class="div-selecao-interna">
-              <img class="img-selecao" src="./imgs/Check.svg">
-              <p class="text-selecao"><d>Taça -  R$ 1,50</d></p>
-            </div>
-          </div>
-      
-          <div class="div-total">
-            <p class="titulo-total">Valor total</p>
-            <div class="div-total-interna">
-              <p class="antes-total">De R$ 720 por:</p>
-              <h1 class="depois-total">R$ 600</h1>
-            </div>
-          </div>
-  
-          <p><d>Obs: São 100 unidades de cada louça</d></p>
-          <br>
-          <div class="enviar">
-            <a href="https://api.whatsapp.com/send?phone=5595991275451">
-              <button>
-                <p>Alugar essa quantidade via WhatsApp</p>
-                <span class="material-symbols-outlined">send</span>
-              </button>
-            </a>
-          </div>
-        </div>
-    
-        <div class="separador s1 s3"></div>
-  
-        <div class="div-secundaria" id="Proposta2">
-          <h1 class="titulo mr-t-menu">Proposta 2<br>de Aluguel</h1>
-          
-          <div class="div-selecao">
-            <div class="div-selecao-interna">
-              <img class="img-selecao" src="./imgs/Check.svg">
-              <p class="text-selecao"><d>Prato - R$ 1,80</d></p>
-            </div>
-      
-            <div class="div-selecao-interna">
-              <img class="img-selecao" src="./imgs/Check.svg">
-              <p class="text-selecao"><d>Garfo - R$ 0,90</d></p>
-            </div>
-      
-            <div class="div-selecao-interna">
-              <img class="img-selecao" src="./imgs/Check.svg">
-              <p class="text-selecao"><d>Faca -  R$ 0,90</d></p>
-            </div>
-      
-            <div class="div-selecao-interna">
-              <img class="img-selecao" src="./imgs/Check.svg">
-              <p class="text-selecao"><d>Colher -  R$ 1,80</d></p>
-            </div>
-      
-            <div class="div-selecao-interna">
-              <img class="img-selecao" src="./imgs/Check.svg">
-              <p class="text-selecao"><d>Taça -  R$ 1,80</d></p>
-            </div>
-          </div>
-      
-          <div class="div-total">
-            <p class="titulo-total">Valor total</p>
-            <div class="div-total-interna">
-              <h1 class="depois-total">R$ 360</h1>
-              <p class="legenda"><d>Ou mais 2 travessa de vidro e <br>2 rechaud de R$ 420 por R$ 400</d></p>
-            </div>
-          </div>
-      
-          <p><d>Obs: São 50 unidades de cada louça</d></p>
-          <br>
-          <div class="enviar">
-            <a href="https://api.whatsapp.com/send?phone=5595991275451">
-              <button>
-                <p>Alugar essa quantidade via WhatsApp</p>
-                <span class="material-symbols-outlined">send</span>
-              </button>
-            </a>
-          </div>
-        </div>
+
+    <main class="tela0">
+      <section class="nave-lat">
+        <button class="nav-button button" id="button1" onclick="button1()">Pratos</button>
+        <button class="nav-button button" id="button2" onclick="button2()">Talheres</button>
+        <button class="nav-button button" id="button3" onclick="button3()">Para Bebidas</button>
+        <button class="nav-button button" id="button4" onclick="button4()">Para Comidas</button>
       </section>
-    </main>
-  
-    <div class="separador-tudo s3"></div>
-  
-    <main class="tela2" id="Tabelas">
-      <section class="div-base">
-        <div class="div-secundaria" id="TabelaDePreço">
-          <h1 class="titulo mr-t-menu">Tabela <br>de Preço</h1>
+
+      <div class="infor-itens" id="div-1" data-aos="fade-left"
+         data-aos-anchor="#example-anchor"
+         data-aos-offset="500"
+         data-aos-duration="500">
+        <section id="divConteudo1" class="preço">
+          <h1 class="titulo mr-t-menu">Pratos</h1>
   
           <table>
            <tr>
-              <th>Nome</th>
-              <th class="center">Quant</th>
+              <th class="nome">Nome</th>
+              <th class="center">Quantidade</th>
               <th class="center">R$</th>
            </tr>
            <tr>
@@ -282,26 +186,116 @@
               <td class="center">1</td>
               <td class="center">1,20</td>
             </tr>
+          </table>
+
+          <h1 class="titulo mr-t-menu">Descontos</h1>
+
+          <table>
            <tr>
+              <th class="nome">Nome</th>
+              <th class="center">Quantidade</th>
+              <th class="center didi">R$</th>
+           </tr>
+           <tr>
+              <td>Prato</td>
+              <td class="center">100 ou mais</td>
+              <td class="center">1,50</td>
+           </tr>
+          </table>
+        </section>
+  
+        <section id="divConteudo1" class="preço">
+          <h1 class="titulo mr-t-menu">Fotos</h1>
+          <div class="div-imgs">
+            <img src="./fotos/imgs_infor/1-Prato.jpg" width="180px">
+            <img src="./fotos/imgs_infor/2-Prato para sobremesa.jpg" width="180px">
+          </div>
+        </section>
+      </div>
+
+      <div class="infor-itens" id="div-2" data-aos="fade-left"
+         data-aos-anchor="#example-anchor"
+         data-aos-offset="500"
+         data-aos-duration="500">
+        <section id="divConteudo1" class="preço">
+          <h1 class="titulo mr-t-menu">Talheres</h1>
+
+          <table>
+           <tr>
+              <th class="nome">Nome</th>
+              <th class="center">Quantidade</th>
+              <th class="center">R$</th>
+           </tr>
+            <tr>
               <td>Faca inox</td>
               <td class="center">1</td>
               <td class="center">0,90</td>
-           </tr>
-           <tr>
+            </tr>
+            <tr>
               <td>Garfo inox</td>
               <td class="center">1</td>
               <td class="center">0,90</td>
-           </tr>
-           <tr>
+            </tr>
+            <tr>
               <td>Colher inox</td>
               <td class="center">1</td>
               <td class="center">1,80</td>
+            </tr>
+          </table>
+
+          <h1 class="titulo mr-t-menu">Descontos</h1>
+
+          <table>
+           <tr>
+              <th class="nome">Nome</th>
+              <th class="center">Quantidade</th>
+              <th class="center didi">R$</th>
            </tr>
            <tr>
+              <td>Faca inox</td>
+              <td class="center">100 ou mais</td>
+              <td class="center">0,75</td>
+           </tr>
+           <tr>
+              <td>Garfo inox</td>
+              <td class="center">100 ou mais</td>
+              <td class="center">0,75</td>
+           </tr>
+           <tr>
+              <td>Colher inox</td>
+              <td class="center">100 ou mais</td>
+              <td class="center">1,50</td>
+           </tr>
+          </table>
+        </section>
+
+        <section id="divConteudo1" class="preço">
+          <h1 class="titulo mr-t-menu">Fotos</h1>
+          <div class="div-imgs">
+            <img src="./fotos/imgs_infor/3-Garfo e faca.jpg" width="180px">
+            <img src="./fotos/imgs_infor/4-Colher.jpg" width="180px">
+          </div>
+        </section>
+      </div>
+
+      <div class="infor-itens" id="div-3" data-aos="fade-left"
+         data-aos-anchor="#example-anchor"
+         data-aos-offset="500"
+         data-aos-duration="500">
+        <section id="divConteudo1" class="preço">
+          <h1 class="titulo mr-t-menu">Para Bebidas</h1>
+
+          <table>
+           <tr>
+              <th class="nome">Nome</th>
+              <th class="center">Quantidade</th>
+              <th class="center">R$</th>
+           </tr>
+            <tr>
               <td>Taça de vidro</td>
               <td class="center">1</td>
               <td class="center">1,80</td>
-           </tr>
+            </tr>
             <tr>
               <td class="nome">Copo de vidro</td>
               <td class="center">1</td>
@@ -317,7 +311,57 @@
               <td class="center">1</td>
               <td class="center">4,00</td>
             </tr>
+          </table>
+
+          <h1 class="titulo mr-t-menu">Descontos</h1>
+
+          <table>
            <tr>
+              <th class="nome">Nome</th>
+              <th class="center">Quantidade</th>
+              <th class="center didi">R$</th>
+           </tr>
+           <tr>
+              <td class="nome">Taça de vidro</td>
+              <td class="center">100 ou mais</td>
+              <td class="center">1,50</td>
+           </tr>
+            <tr>
+              <td class="nome">Copo de vidro</td>
+              <td class="center">100 ou mais</td>
+              <td class="center">1,00</td>
+            </tr>
+          </table>
+        </section>
+
+        <section id="divConteudo1" class="preço">
+          <h1 class="titulo mr-t-menu">Fotos</h1>
+          <div class="div-imgs">
+            <img src="./fotos/imgs_infor/5-Taça de vidro.jpg" width="180px">
+            <img src="./fotos/imgs_infor/6-Copo de vidro.jpg" width="180px">
+            <br>
+            <img src="./fotos/imgs_infor/7-Xicara e pires.jpg" width="180px">
+            <img src="./fotos/imgs_infor/8-Jarra.jpg" width="180px">
+            <br>
+            <img src="./fotos/imgs_infor/14-Colher de suco.jpg" width="180px">
+          </div>
+        </section>
+      </div>
+
+      <div class="infor-itens" id="div-4" data-aos="fade-left"
+         data-aos-anchor="#example-anchor"
+         data-aos-offset="500"
+         data-aos-duration="500">
+        <section id="divConteudo1" class="preço">
+          <h1 class="titulo mr-t-menu">Para Comidas</h1>
+
+          <table>
+           <tr>
+              <th class="nome">Nome</th>
+              <th class="center">Quantidade</th>
+              <th class="center">R$</th>
+           </tr>
+            <tr>
               <td>Travessa de vidro</td>
               <td class="center">1</td>
               <td class="center">10,00</td>
@@ -343,53 +387,24 @@
               <td class="center">3,00</td>
             </tr>
           </table>
-          <div class="separador s3"></div>
-        </div>
-  
-        <div class="div-secundaria" id="TabelaDeDesconto">
-          <h1 class="titulo mr-t-menu">Tabela <br>de Desconto</h1>
-  
-          <table>
-           <tr>
-              <th class="nome">Nome</th>
-              <th class="center">Quantidade</th>
-              <th class="center didi">R$</th>
-           </tr>
-           <tr>
-              <td>Prato</td>
-              <td class="center">100 ou mais</td>
-              <td class="center">1,50</td>
-           </tr>
-           <tr>
-              <td>Faca inox</td>
-              <td class="center">100 ou mais</td>
-              <td class="center">0,75</td>
-           </tr>
-           <tr>
-              <td>Garfo inox</td>
-              <td class="center">100 ou mais</td>
-              <td class="center">0,75</td>
-           </tr>
-           <tr>
-              <td>Colher inox</td>
-              <td class="center">100 ou mais</td>
-              <td class="center">1,50</td>
-           </tr>
-           <tr>
-              <td class="nome">Taça de vidro</td>
-              <td class="center">100 ou mais</td>
-              <td class="center">1,50</td>
-           </tr>
-            <tr>
-              <td class="nome">Copo de vidro</td>
-              <td class="center">100 ou mais</td>
-              <td class="center">1,00</td>
-            </tr>
-          </table>
-        </div>
-      </section>
-    </main>
+        </section>
 
+        <section id="divConteudo1" class="preço">
+          <h1 class="titulo mr-t-menu">Fotos</h1>
+          <div class="div-imgs">
+            <img src="./fotos/imgs_infor/9-Travessa de vidro.jpg" width="180px">
+            <img src="./fotos/imgs_infor/10-Travessa de porcelanato.jpg" width="180px">
+            <br>
+            <img src="./fotos/imgs_infor/11-Rechaud.jpg" width="180px">
+            <img src="./fotos/imgs_infor/12-Colher de servir 1.jpg" width="180px">
+            <br>
+            <img src="./fotos/imgs_infor/13-Colher de servir 2.jpg" width="180px">
+            <img src="./fotos/imgs_infor/15-Pinça para alimentação.jpg" width="180px">
+          </div>
+        </section>
+      </div>
+    </main>
+  
     <div class="separador-tudo s3"></div>
 
     <main class="tela3" id="Simulador">
@@ -504,11 +519,19 @@
     <script src="links.js"></script>
     <script src="script.js"></script>
     <script src="rodape.js"></script>
+    <script src="fotos.js"></script>
+    <script src="button.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK796Q3F"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <script>
+      AOS.init();
+    </script>
   </body>
   
 </html>
