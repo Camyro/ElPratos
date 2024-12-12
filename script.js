@@ -131,7 +131,7 @@ setInterval(function() {
   var ttlColher = inpColher > 99 ? inpColher * 1.50 : inpColher * 1.80;
   var ttlTaçaDeVidro = inpTaçaDeVidro > 99 ? inpTaçaDeVidro * 1.50 : inpTaçaDeVidro * 1.80;
 
-  var ttlCopoDeVidro = inpCopoDeVidro > 99 ? inpCopoDeVidro * 1.00 : inpCopoDeVidro * 1.20;
+  var ttlCopoDeVidro = inpCopoDeVidro > 99 ? inpCopoDeVidro * 1.20 : inpCopoDeVidro * 1.40;
 
   var ttlPratoDeSobremesas = inpPratoDeSobremesas * 1.20;
   var ttlXicaraEPires = inpXicaraEPires * 5;
