@@ -128,7 +128,7 @@ setInterval(function() {
   var ttlGarfo = inpGarfo > 99 ? inpGarfo * 0.75 : inpGarfo * 0.90;
   
   var ttlPrato = inpPrato > 99 ? inpPrato * 1.50 : inpPrato * 1.80;
-  var ttlColher = inpColher > 99 ? inpColher * 1.50 : inpColher * 1.80;
+  var ttlColher = inpColher > 99 ? inpColher * 0.75 : inpColher * 0.90;
   var ttlTaçaDeVidro = inpTaçaDeVidro > 99 ? inpTaçaDeVidro * 1.50 : inpTaçaDeVidro * 1.80;
 
   var ttlCopoDeVidro = inpCopoDeVidro > 99 ? inpCopoDeVidro * 1.20 : inpCopoDeVidro * 1.40;
