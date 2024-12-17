@@ -67,7 +67,7 @@ setInterval(function() {
   link = "";
 
   //Fazendo a verificação
-  var inpPrato = inpPrato > 150 ? 150 : inpPrato;
+  var inpPrato = inpPrato > 200 ? 200 : inpPrato;
   var inpPrato = inpPrato < 0 ? 0 : inpPrato;
   document.getElementById("inp-Prato").value = inpPrato;
 
@@ -75,11 +75,11 @@ setInterval(function() {
   var inpPratoDeSobremesas = inpPratoDeSobremesas < 0 ? 0 : inpPratoDeSobremesas;
   document.getElementById("inp-PratoDeSobremesas").value = inpPratoDeSobremesas;
   
-  var inpFaca = inpFaca > 150 ? 150 : inpFaca;
+  var inpFaca = inpFaca > 200 ? 200 : inpFaca;
   var inpFaca = inpFaca < 0 ? 0 : inpFaca;
   document.getElementById("inp-Faca").value = inpFaca;
 
-  var inpGarfo = inpGarfo > 150 ? 150 : inpGarfo;
+  var inpGarfo = inpGarfo > 200 ? 200 : inpGarfo;
   var inpGarfo = inpGarfo < 0 ? 0 : inpGarfo;
   document.getElementById("inp-Garfo").value = inpGarfo;
 
@@ -91,7 +91,7 @@ setInterval(function() {
   var inpTaçaDeVidro = inpTaçaDeVidro < 0 ? 0 : inpTaçaDeVidro;
   document.getElementById("inp-TaçaDeVidro").value = inpTaçaDeVidro;
 
-  var inpCopoDeVidro = inpCopoDeVidro > 120 ? 120 : inpCopoDeVidro;
+  var inpCopoDeVidro = inpCopoDeVidro > 200 ? 200 : inpCopoDeVidro;
   var inpCopoDeVidro = inpCopoDeVidro < 0 ? 0 : inpCopoDeVidro;
   document.getElementById("inp-CopoDeVidro").value = inpCopoDeVidro;
 
