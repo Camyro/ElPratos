@@ -41,7 +41,6 @@ element.innerHTML = `
             <a href="https://elpratos.vercel.app/fotos">Fotos das louças</a>
             <a href="https://elpratos.vercel.app/sobre">Perguntas e sobre</a>
             <a href="https://elpratos.vercel.app/#TabelaDePreçoEDesconto">Tabela de Preço e Desconto</a>
-            <a href="https://elpratos.vercel.app/#Simulador">Simulador</a>
           </div>
           
           <div class="links-column">
