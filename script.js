@@ -16,6 +16,21 @@ document.getElementById("inp-PegadorParaAlimentacao").value = "0";
 var link;
 
 setInterval(function() {
+  limparEntrada("inp-Prato");
+  limparEntrada("inp-PratoDeSobremesas");
+  limparEntrada("inp-Faca");
+  limparEntrada("inp-Garfo");
+  limparEntrada("inp-Colher");
+  limparEntrada("inp-TaçaDeVidro");
+  limparEntrada("inp-CopoDeVidro");
+  limparEntrada("inp-XicaraEPires");
+  limparEntrada("inp-JarraEColherDeSuco");
+  limparEntrada("inp-TravessaDeVidro");
+  limparEntrada("inp-TravessaDePorcelanato");
+  limparEntrada("inp-Rechaud");
+  limparEntrada("inp-ColherDeServi");
+  limparEntrada("inp-PegadorParaAlimentacao");
+  
   //Informações essenciais
   var inpPrato = document.getElementById("inp-Prato").value;
   var inpPratoDeSobremesas = document.getElementById("inp-PratoDeSobremesas").value;
@@ -250,4 +265,23 @@ function enviar(){
   } else{
     document.getElementById("invalido").innerHTML = "Nenhum item foi adicionado";
   }
+}
+
+function limparEntrada(id) {
+    let el = document.getElementById(id);
+    let valor = el.value;
+
+    // Se estiver vazio, vira 0
+    if (valor.trim() === "") {
+        el.value = 0;
+        return;
+    }
+
+    // Remove zeros à esquerda
+    valor = valor.replace(/^0+(?!$)/, "");
+
+    // Se após remover zeros a pessoa apagou tudo, volta para 0
+    if (valor === "") valor = "0";
+
+    el.value = valor;
 }
