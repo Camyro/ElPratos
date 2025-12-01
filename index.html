@@ -1,528 +1,544 @@
 <!DOCTYPE html>
 <html lang="en" class="html">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Pratos</title>
-    <link rel="icon" href="/imgs/logo-el_pratos.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsividade.css">
-    <link rel="stylesheet" href="rodape.css">
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Pratos</title>
+  <link rel="icon" href="/imgs/logo-el_pratos.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsividade.css">
+  <link rel="stylesheet" href="rodape.css">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWP28VFFV4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-      gtag('config', 'G-EWP28VFFV4');
-    </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWP28VFFV4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KK796Q3F');</script>
-    <!-- End Google Tag Manager -->
+    gtag('config', 'G-EWP28VFFV4');
+  </script>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5550330300480012"
-       crossorigin="anonymous"></script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KK796Q3F');</script>
+  <!-- End Google Tag Manager -->
 
-    <link
-      rel="stylesheet"
-      data-purpose="Layout StyleSheet"
-      title="Web Awesome"
-      href="/css/app-wa-89587a1ff923b19df8a6a37179b8327c.css?vsn=d"
-    >
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5550330300480012"
+    crossorigin="anonymous"></script>
 
-      <link
-        rel="stylesheet"
-        href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
-      >
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+    href="/css/app-wa-89587a1ff923b19df8a6a37179b8327c.css?vsn=d">
 
-      <link
-        rel="stylesheet"
-        href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
-      >
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
 
-      <link
-        rel="stylesheet"
-        href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
-      >
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css">
 
-      <link
-        rel="stylesheet"
-        href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
-      >
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
 
-      <link
-        rel="stylesheet"
-        href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
-      >
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
 
-    <script>(function(s){s.dataset.zone='10263810',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-  </head>
-  <body id="Inicio">
-    <header class="nav">
-      <div class="div-logo">
-        <img src="./imgs/logo-el_pratos.png" alt="Logo do site" class="logo">
-        <p>El Pratos</p>
-      </div>
-  
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      
-      <ul class="menu">
-        <li>
-          <i class="fa-solid fa-flag-checkered"></i>
-          <a href="#Inicio" class="link1">Inicio</a>
-        </li>
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
 
-        <li class="s2 comp"><div class="separador s2"></div></li>
-        <li class="comp">
-          <i class="fa-solid fa-file"></i>
-          <a href="#Propostas" class="link2">Propostas</a>
-        </li>
-        
-        <li class="s2 cel"><div class="separador s2"></div></li>
-        <li class="cel">
-          <i class="fa-solid fa-file"></i>
-          <a href="#Proposta1" class="link3">Proposta 1</a>
-        </li>
-        
-        <li class="s2 cel"><div class="separador s2"></div></li>
-        <li class="cel">
-          <i class="fa-solid fa-file"></i>
-          <a href="#Proposta2" class="link4">Proposta 2</a>
-        </li>
+  <script>(function (s) {s.dataset.zone = '10263810', s.src = 'https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 
-        <li class="s2"><div class="separador s2"></div></li>
-        <li>
-          <i class="fa-solid fa-table-cells"></i>
-          <a href="#TabelaDePreçoEDesconto" class="link5">Tabelas de Preço e Desconto</a>
-        </li>
+  <script src="https://quge5.com/88/tag.min.js" data-zone="189600" async data-cfasync="false"></script>
+</head>
 
-        <li class="s2"><div class="separador s2"></div></li>
-        <li>
-          <i class="fa-solid fa-calculator"></i>
-          <a href="#Simulador" class="link8">Simulador</a>
-        </li>
-
-        <li class="s2"><div class="separador s2"></div></li>
-        <li>
-          <i class="fa-solid fa-image-polaroid"></i>
-          <a href="fotos/" class="link9">Fotos das louças</a>
-        </li>
-        
-        <li class="s2"><div class="separador s2"></div></li>
-        <li>
-          <i class="fa-solid fa-comment-question"></i>
-          <a href="sobre/" class="link10">Dúvidas e sobre</a>
-        </li>
-        
-        <li class="s2"><div class="separador s2"></div></li>
-        <li>
-          <i class="fa-solid fa-phone ico-font-size-20px"></i>
-          <a href="#Contatos" class="link11">Contatos</a>
-        </li>
-      </ul>
-    </header>
-
-    <div class="espaco">
-      <p class="titulo2">El Pratos <br><g>Alugueis de <c>louças</c></g></p>
-      <p class="titulo3">Louças <c>para <br>qualquer evento</c></p>
-      <img src="./imgs/Prato.svg" alt="Um prato" class="prato" data-aos="fade-up" data-aos-duration="3000">
+<body id="Inicio">
+  <header class="nav">
+    <div class="div-logo">
+      <img src="./imgs/logo-el_pratos.png" alt="Logo do site" class="logo">
+      <p>El Pratos</p>
     </div>
 
-    <div class="desfoque"></div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-    <main class="tela0" id="TabelaDePreçoEDesconto">
-      <section class="nave-lat">
-        <button class="nav-button button active" id="button1" onclick="button1()">Pratos</button>
-        <button class="nav-button button" id="button2" onclick="button2()">Talheres</button>
-        <button class="nav-button button" id="button3" onclick="button3()">Para Bebidas</button>
-        <button class="nav-button button" id="button4" onclick="button4()">Para Comidas</button>
+    <ul class="menu">
+      <li>
+        <i class="fa-solid fa-flag-checkered"></i>
+        <a href="#Inicio" class="link1">Inicio</a>
+      </li>
+
+      <li class="s2 comp">
+        <div class="separador s2"></div>
+      </li>
+      <li class="comp">
+        <i class="fa-solid fa-file"></i>
+        <a href="#Propostas" class="link2">Propostas</a>
+      </li>
+
+      <li class="s2 cel">
+        <div class="separador s2"></div>
+      </li>
+      <li class="cel">
+        <i class="fa-solid fa-file"></i>
+        <a href="#Proposta1" class="link3">Proposta 1</a>
+      </li>
+
+      <li class="s2 cel">
+        <div class="separador s2"></div>
+      </li>
+      <li class="cel">
+        <i class="fa-solid fa-file"></i>
+        <a href="#Proposta2" class="link4">Proposta 2</a>
+      </li>
+
+      <li class="s2">
+        <div class="separador s2"></div>
+      </li>
+      <li>
+        <i class="fa-solid fa-table-cells"></i>
+        <a href="#TabelaDePreçoEDesconto" class="link5">Tabelas de Preço e Desconto</a>
+      </li>
+
+      <li class="s2">
+        <div class="separador s2"></div>
+      </li>
+      <li>
+        <i class="fa-solid fa-calculator"></i>
+        <a href="#Simulador" class="link8">Simulador</a>
+      </li>
+
+      <li class="s2">
+        <div class="separador s2"></div>
+      </li>
+      <li>
+        <i class="fa-solid fa-image-polaroid"></i>
+        <a href="fotos/" class="link9">Fotos das louças</a>
+      </li>
+
+      <li class="s2">
+        <div class="separador s2"></div>
+      </li>
+      <li>
+        <i class="fa-solid fa-comment-question"></i>
+        <a href="sobre/" class="link10">Dúvidas e sobre</a>
+      </li>
+
+      <li class="s2">
+        <div class="separador s2"></div>
+      </li>
+      <li>
+        <i class="fa-solid fa-phone ico-font-size-20px"></i>
+        <a href="#Contatos" class="link11">Contatos</a>
+      </li>
+    </ul>
+  </header>
+
+  <div class="espaco">
+    <p class="titulo2">El Pratos <br>
+      <g>Alugueis de <c>louças</c>
+      </g>
+    </p>
+    <p class="titulo3">Louças <c>para <br>qualquer evento</c>
+    </p>
+    <img src="./imgs/Prato.svg" alt="Um prato" class="prato" data-aos="fade-up" data-aos-duration="3000">
+  </div>
+
+  <div class="desfoque"></div>
+
+  <main class="tela0" id="TabelaDePreçoEDesconto">
+    <section class="nave-lat">
+      <button class="nav-button button active" id="button1" onclick="button1()">Pratos</button>
+      <button class="nav-button button" id="button2" onclick="button2()">Talheres</button>
+      <button class="nav-button button" id="button3" onclick="button3()">Para Bebidas</button>
+      <button class="nav-button button" id="button4" onclick="button4()">Para Comidas</button>
+    </section>
+
+    <div class="infor-itens" id="div-1" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+      data-aos-duration="500">
+      <section id="divConteudo1" class="preço">
+        <h1 class="titulo mr-t-menu">Pratos</h1>
+
+        <table>
+          <tr>
+            <th class="nome">Nome</th>
+            <th class="center">Quantidade</th>
+            <th class="center">R$</th>
+          </tr>
+          <tr>
+            <td>Prato</td>
+            <td class="center">1</td>
+            <td class="center">1,80</td>
+          </tr>
+          <tr>
+            <td class="nome">Prato de sobremesas</td>
+            <td class="center">1</td>
+            <td class="center">1,20</td>
+          </tr>
+        </table>
+
+        <h1 class="titulo mr-t-menu">Descontos</h1>
+
+        <table>
+          <tr>
+            <th class="nome">Nome</th>
+            <th class="center">Quantidade</th>
+            <th class="center didi">R$</th>
+          </tr>
+          <tr>
+            <td>Prato</td>
+            <td class="center">100 ou mais</td>
+            <td class="center">1,50</td>
+          </tr>
+        </table>
       </section>
 
-      <div class="infor-itens" id="div-1" data-aos="fade-left"
-         data-aos-anchor="#example-anchor"
-         data-aos-offset="500"
-         data-aos-duration="500">
-        <section id="divConteudo1" class="preço">
-          <h1 class="titulo mr-t-menu">Pratos</h1>
-  
-          <table>
-           <tr>
-              <th class="nome">Nome</th>
-              <th class="center">Quantidade</th>
-              <th class="center">R$</th>
-           </tr>
-           <tr>
-              <td>Prato</td>
-              <td class="center">1</td>
-              <td class="center">1,80</td>
-           </tr>
-            <tr>
-              <td class="nome">Prato de sobremesas</td>
-              <td class="center">1</td>
-              <td class="center">1,20</td>
-            </tr>
-          </table>
-
-          <h1 class="titulo mr-t-menu">Descontos</h1>
-
-          <table>
-           <tr>
-              <th class="nome">Nome</th>
-              <th class="center">Quantidade</th>
-              <th class="center didi">R$</th>
-           </tr>
-           <tr>
-              <td>Prato</td>
-              <td class="center">100 ou mais</td>
-              <td class="center">1,50</td>
-           </tr>
-          </table>
-        </section>
-  
-        <section id="divConteudo1" class="preço">
-          <h1 class="titulo mr-t-menu">Fotos</h1>
-          <div class="div-imgs">
-            <a href="https://elpratos.vercel.app/fotos/#Prato"><img src="../fotos/imgs_infor/1-Prato.webp" width="180px"></a>
-            <a href="https://elpratos.vercel.app/fotos#PratoParaSobremesa"><img src="../fotos/imgs_infor/2-Prato para sobremesa.webp" width="180px"></a>
-          </div>
-        </section>
-      </div>
-
-      <div class="infor-itens" id="div-2" data-aos="fade-left"
-         data-aos-anchor="#example-anchor"
-         data-aos-offset="500"
-         data-aos-duration="500">
-        <section id="divConteudo1" class="preço">
-          <h1 class="titulo mr-t-menu">Talheres</h1>
-
-          <table>
-           <tr>
-              <th class="nome">Nome</th>
-              <th class="center">Quantidade</th>
-              <th class="center">R$</th>
-           </tr>
-            <tr>
-              <td>Faca inox</td>
-              <td class="center">1</td>
-              <td class="center">0,90</td>
-            </tr>
-            <tr>
-              <td>Garfo inox</td>
-              <td class="center">1</td>
-              <td class="center">0,90</td>
-            </tr>
-            <tr>
-              <td>Colher inox</td>
-              <td class="center">1</td>
-              <td class="center">0,90</td>
-            </tr>
-          </table>
-
-          <h1 class="titulo mr-t-menu">Descontos</h1>
-
-          <table>
-           <tr>
-              <th class="nome">Nome</th>
-              <th class="center">Quantidade</th>
-              <th class="center didi">R$</th>
-           </tr>
-           <tr>
-              <td>Faca inox</td>
-              <td class="center">100 ou mais</td>
-              <td class="center">0,75</td>
-           </tr>
-           <tr>
-              <td>Garfo inox</td>
-              <td class="center">100 ou mais</td>
-              <td class="center">0,75</td>
-           </tr>
-           <tr>
-              <td>Colher inox</td>
-              <td class="center">100 ou mais</td>
-              <td class="center">0,75</td>
-           </tr>
-          </table>
-        </section>
-
-        <section id="divConteudo1" class="preço">
-          <h1 class="titulo mr-t-menu">Fotos</h1>
-          <div class="div-imgs">
-            <a href="https://elpratos.vercel.app/fotos/#GarfoEFaca"><img src="../fotos/imgs_infor/3-Garfo e faca.webp" width="180px"></a>
-            <a href="https://elpratos.vercel.app/fotos/#Colher"><img src="../fotos/imgs_infor/4-Colher.webp" width="180px"></a>
-          </div>
-        </section>
-      </div>
-
-      <div class="infor-itens" id="div-3" data-aos="fade-left"
-         data-aos-anchor="#example-anchor"
-         data-aos-offset="500"
-         data-aos-duration="500">
-        <section id="divConteudo1" class="preço">
-          <h1 class="titulo mr-t-menu">Para Bebidas</h1>
-
-          <table>
-           <tr>
-              <th class="nome">Nome</th>
-              <th class="center">Quantidade</th>
-              <th class="center">R$</th>
-           </tr>
-            <tr>
-              <td>Taça de vidro</td>
-              <td class="center">1</td>
-              <td class="center">1,80</td>
-            </tr>
-            <tr>
-              <td class="nome">Copo de vidro</td>
-              <td class="center">1</td>
-              <td class="center">1,40</td>
-            </tr>
-            <tr>
-              <td class="nome">Xicara e pires</td>
-              <td class="center">1</td>
-              <td class="center">5,00</td>
-            </tr>
-            <tr>
-              <td class="nome">Jarra e colher de suco</td>
-              <td class="center">1</td>
-              <td class="center">4,00</td>
-            </tr>
-          </table>
-
-          <h1 class="titulo mr-t-menu">Descontos</h1>
-
-          <table>
-           <tr>
-              <th class="nome">Nome</th>
-              <th class="center">Quantidade</th>
-              <th class="center didi">R$</th>
-           </tr>
-           <tr>
-              <td class="nome">Taça de vidro</td>
-              <td class="center">100 ou mais</td>
-              <td class="center">1,50</td>
-           </tr>
-            <tr>
-              <td class="nome">Copo de vidro</td>
-              <td class="center">100 ou mais</td>
-              <td class="center">1,20</td>
-            </tr>
-          </table>
-        </section>
-
-        <section id="divConteudo1" class="preço">
-          <h1 class="titulo mr-t-menu">Fotos</h1>
-          <div class="div-imgs">
-            <a href="https://elpratos.vercel.app/fotos/#Ta%C3%A7aDeVidro"><img src="../fotos/imgs_infor/6-Taca de vidro.webp" width="180px"></a>
-            <a href="https://elpratos.vercel.app/fotos#CopoDeVidro"><img src="../fotos/imgs_infor/7-Copo de vidro.webp" width="180px"></a>
-            <br>
-            <a href="https://elpratos.vercel.app/fotos/#XicaraEPires"><img src="../fotos/imgs_infor/8-Xicara e pires.webp" width="180px"></a>
-            <a href="https://elpratos.vercel.app/fotos#Jarra"><img src="../fotos/imgs_infor/9-Jarra.webp" width="180px"></a>
-            <br>
-            <a href="https://elpratos.vercel.app/fotos#ColherDeSuco"><img src="../fotos/imgs_infor/17-Colher de suco.webp" width="180px"></a>
-          </div>
-        </section>
-      </div>
-
-      <div class="infor-itens" id="div-4" data-aos="fade-left"
-         data-aos-anchor="#example-anchor"
-         data-aos-offset="500"
-         data-aos-duration="500">
-        <section id="divConteudo1" class="preço">
-          <h1 class="titulo mr-t-menu">Para Comidas</h1>
-
-          <table>
-           <tr>
-              <th class="nome">Nome</th>
-              <th class="center">Quantidade</th>
-              <th class="center">R$</th>
-           </tr>
-            <tr>
-              <td>Travessa de vidro</td>
-              <td class="center">1</td>
-              <td class="center">10,00</td>
-            </tr>
-            <tr>
-              <td>Travessa de porcelanato</td>
-              <td class="center">1</td>
-              <td class="center">15,00</td>
-            </tr>
-            <tr>
-              <td>Rechaud</td>
-              <td class="center">1</td>
-              <td class="center">20,00</td>
-            </tr>
-            <tr>
-              <td>Colher de servir</td>
-              <td class="center">1</td>
-              <td class="center">3,00</td>
-            </tr>
-            <tr>
-              <td>Pegador para alimentação</td>
-              <td class="center">1</td>
-              <td class="center">3,00</td>
-            </tr>
-          </table>
-        </section>
-
-        <section id="divConteudo1" class="preço">
-          <h1 class="titulo mr-t-menu">Fotos</h1>
-          <div class="div-imgs">
-            <a href="https://elpratos.vercel.app/fotos/#TravessaDeVidro"><img src="../fotos/imgs_infor/10-Travessa de vidro.webp" width="180px"></a>
-            <a href="https://elpratos.vercel.app/fotos/#TravessaDePorcelanato"><img src="../fotos/imgs_infor/11-Travessa de porcelanato.webp" width="180px"></a>
-            <br>
-            <a href="https://elpratos.vercel.app/fotos/#Rechaud"><img src="../fotos/imgs_infor/12-Rechaud.webp" width="180px"></a>
-            <a href="https://elpratos.vercel.app/fotos/#ColherDeServir1"><img src="../fotos/imgs_infor/15-Colher de servir 1.webp" width="180px"></a>
-            <br>
-            <a href="https://elpratos.vercel.app/fotos/#ColherDeServir2"><img src="../fotos/imgs_infor/16-Colher de servir 2.webp" width="180px"></a>
-            <a href="https://elpratos.vercel.app/fotos/#Pin%C3%A7aParaAlimenta%C3%A7%C3%A3o"><img src="../fotos/imgs_infor/18-Pinça para alimentação.webp" width="180px"></a>
-          </div>
-        </section>
-      </div>
-    </main>
-  
-    <div class="separador-tudo s3"></div>
-
-    <main class="tela3" id="Simulador">
-      <section class="div-base div-base-img">
-        <div class="div-secundaria center comp">
-          <img src="./imgs/undraw_calculator_re_alsc.svg" class="img-calc">
-        </div>
-        
-        <div class="div-secundaria" id="TabelaDePreço">
-          <h1 class="titulo mr-t-menu">Simulador <br>de Preço</h1>
-
-          <table>
-           <tr>
-              <th class="nome">Nome</th>
-              <th class="center">Quant</th>
-              <th class="center">R$</th>
-           </tr>
-           <tr>
-              <td>Prato</td>
-              <td class="center quant"><input type="number" id="inp-Prato" class="quant"></td>
-              <td class="center"  id="text-Prato">1,80</td>
-           </tr>
-            <tr>
-              <td class="nome">Prato de sobremesas</td>
-              <td class="center quant"><input type="number" id="inp-PratoDeSobremesas" class="quant"></td>
-              <td class="center"  id="text-PratoDeSobremesas">1,20</td>
-            </tr>
-           <tr>
-              <td>Faca inox</td>
-              <td class="center quant"><input type="number" id="inp-Faca" class="quant"></td>
-              <td class="center"  id="text-Faca">0,90</td>
-           </tr>
-           <tr>
-              <td>Garfo inox</td>
-              <td class="center quant"><input type="number" id="inp-Garfo" class="quant"></td>
-              <td class="center"  id="text-Garfo">0,90</td>
-           </tr>
-            <tr>
-                <td>Colher inox</td>
-                <td class="center quant"><input type="number" id="inp-Colher" class="quant"></td>
-                <td class="center"  id="text-Colher">0,90</td>
-           </tr>
-            
-           <tr>
-              <td>Taça de vidro</td>
-              <td class="center quant"><input type="number"  id="inp-TaçaDeVidro" class="quant"></td>
-              <td class="center"  id="text-TaçaDeVidro">1,80</td>
-           </tr>
-            <tr>
-              <td class="nome">Copo de vidro</td>
-              <td class="center quant"><input type="number" id="inp-CopoDeVidro" class="quant"></td>
-              <td class="center"  id="text-CopoDeVidro">1,40</td>
-            </tr>
-            <tr>
-              <td class="nome">Xicara e pires</td>
-              <td class="center quant"><input type="number" id="inp-XicaraEPires" class="quant"></td>
-              <td class="center"  id="text-XicaraEPires">5,00</td>
-            </tr>
-            <tr>
-              <td class="nome">Jarra e colher de suco</td>
-              <td class="center quant"><input type="number" id="inp-JarraEColherDeSuco" class="quant"></td>
-              <td class="center"  id="text-JarraEColherDeSuco">4,00</td>
-            </tr>
-           <tr>
-              <td>Trav. de vidro</td>
-              <td class="center quant"><input type="number" id="inp-TravessaDeVidro" class="quant"></td>
-              <td class="center"  id="text-TravessaDeVidro">10,00</td>
-            </tr>
-            <tr>
-              <td>Trav. de porcelanato</td>
-              <td class="center quant"><input type="number" id="inp-TravessaDePorcelanato" class="quant"></td>
-              <td class="center"  id="text-TravessaDePorcelanato">15,00</td>
-            </tr>
-            <tr>
-              <td>Rechaud</td>
-              <td class="center quant"><input type="number"  id="inp-Rechaud" class="quant"></td>
-              <td class="center"  id="text-Rechaud">20,00</td>
-            </tr>
-            <tr>
-              <td>Colher de servir</td>
-              <td class="center quant"><input type="number"  id="inp-ColherDeServi" class="quant"></td>
-              <td class="center"  id="text-ColherDeServi">3,00</td>
-            </tr>
-            <tr>
-
-              <td>Pegador para alimentação</td>
-              <td class="center quant"><input type="number"  id="inp-PegadorParaAlimentacao" class="quant"></td>
-              <td class="center"  id="text-PegadorParaAlimentacao">3,00</td>
-            </tr>
-            <tr>
-              <td class="nome">Totais</td>
-              <td class="center quant" id="ttl-quant">0</td>
-              <td class="center" id="ttl-var">0</td>
-            </tr>
-          </table>
-
-          <p id="invalido"></p>
+      <section id="divConteudo1" class="preço">
+        <h1 class="titulo mr-t-menu">Fotos</h1>
+        <div class="div-imgs">
+          <a href="https://elpratos.vercel.app/fotos/#Prato"><img src="../fotos/imgs_infor/1-Prato.webp"
+              width="180px"></a>
+          <a href="https://elpratos.vercel.app/fotos#PratoParaSobremesa"><img
+              src="../fotos/imgs_infor/2-Prato para sobremesa.webp" width="180px"></a>
         </div>
       </section>
-      <div class="enviar">
-        <button onclick="enviar()">
-          <p>Alugar essa quantidade via WhatsApp</p>
-          <span class="material-symbols-outlined">send</span>
-        </button>
-      </div>
-    </main>
-    
-    <footer id="element">
-      
-    </footer>
-  
-    <script src="hamburger.js"></script>
-    <script src="links.js"></script>
-    <script src="script.js"></script>
-    <script src="rodape.js"></script>
-    <script src="fotos.js"></script>
-    <script src="button.js"></script>
-    
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK796Q3F"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    </div>
 
-    <script>
-      AOS.init();
-    </script>
-  </body>
-  
+    <div class="infor-itens" id="div-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+      data-aos-duration="500">
+      <section id="divConteudo1" class="preço">
+        <h1 class="titulo mr-t-menu">Talheres</h1>
+
+        <table>
+          <tr>
+            <th class="nome">Nome</th>
+            <th class="center">Quantidade</th>
+            <th class="center">R$</th>
+          </tr>
+          <tr>
+            <td>Faca inox</td>
+            <td class="center">1</td>
+            <td class="center">0,90</td>
+          </tr>
+          <tr>
+            <td>Garfo inox</td>
+            <td class="center">1</td>
+            <td class="center">0,90</td>
+          </tr>
+          <tr>
+            <td>Colher inox</td>
+            <td class="center">1</td>
+            <td class="center">0,90</td>
+          </tr>
+        </table>
+
+        <h1 class="titulo mr-t-menu">Descontos</h1>
+
+        <table>
+          <tr>
+            <th class="nome">Nome</th>
+            <th class="center">Quantidade</th>
+            <th class="center didi">R$</th>
+          </tr>
+          <tr>
+            <td>Faca inox</td>
+            <td class="center">100 ou mais</td>
+            <td class="center">0,75</td>
+          </tr>
+          <tr>
+            <td>Garfo inox</td>
+            <td class="center">100 ou mais</td>
+            <td class="center">0,75</td>
+          </tr>
+          <tr>
+            <td>Colher inox</td>
+            <td class="center">100 ou mais</td>
+            <td class="center">0,75</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="divConteudo1" class="preço">
+        <h1 class="titulo mr-t-menu">Fotos</h1>
+        <div class="div-imgs">
+          <a href="https://elpratos.vercel.app/fotos/#GarfoEFaca"><img src="../fotos/imgs_infor/3-Garfo e faca.webp"
+              width="180px"></a>
+          <a href="https://elpratos.vercel.app/fotos/#Colher"><img src="../fotos/imgs_infor/4-Colher.webp"
+              width="180px"></a>
+        </div>
+      </section>
+    </div>
+
+    <div class="infor-itens" id="div-3" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+      data-aos-duration="500">
+      <section id="divConteudo1" class="preço">
+        <h1 class="titulo mr-t-menu">Para Bebidas</h1>
+
+        <table>
+          <tr>
+            <th class="nome">Nome</th>
+            <th class="center">Quantidade</th>
+            <th class="center">R$</th>
+          </tr>
+          <tr>
+            <td>Taça de vidro</td>
+            <td class="center">1</td>
+            <td class="center">1,80</td>
+          </tr>
+          <tr>
+            <td class="nome">Copo de vidro</td>
+            <td class="center">1</td>
+            <td class="center">1,40</td>
+          </tr>
+          <tr>
+            <td class="nome">Xicara e pires</td>
+            <td class="center">1</td>
+            <td class="center">5,00</td>
+          </tr>
+          <tr>
+            <td class="nome">Jarra e colher de suco</td>
+            <td class="center">1</td>
+            <td class="center">4,00</td>
+          </tr>
+        </table>
+
+        <h1 class="titulo mr-t-menu">Descontos</h1>
+
+        <table>
+          <tr>
+            <th class="nome">Nome</th>
+            <th class="center">Quantidade</th>
+            <th class="center didi">R$</th>
+          </tr>
+          <tr>
+            <td class="nome">Taça de vidro</td>
+            <td class="center">100 ou mais</td>
+            <td class="center">1,50</td>
+          </tr>
+          <tr>
+            <td class="nome">Copo de vidro</td>
+            <td class="center">100 ou mais</td>
+            <td class="center">1,20</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="divConteudo1" class="preço">
+        <h1 class="titulo mr-t-menu">Fotos</h1>
+        <div class="div-imgs">
+          <a href="https://elpratos.vercel.app/fotos/#Ta%C3%A7aDeVidro"><img
+              src="../fotos/imgs_infor/6-Taca de vidro.webp" width="180px"></a>
+          <a href="https://elpratos.vercel.app/fotos#CopoDeVidro"><img src="../fotos/imgs_infor/7-Copo de vidro.webp"
+              width="180px"></a>
+          <br>
+          <a href="https://elpratos.vercel.app/fotos/#XicaraEPires"><img src="../fotos/imgs_infor/8-Xicara e pires.webp"
+              width="180px"></a>
+          <a href="https://elpratos.vercel.app/fotos#Jarra"><img src="../fotos/imgs_infor/9-Jarra.webp"
+              width="180px"></a>
+          <br>
+          <a href="https://elpratos.vercel.app/fotos#ColherDeSuco"><img src="../fotos/imgs_infor/17-Colher de suco.webp"
+              width="180px"></a>
+        </div>
+      </section>
+    </div>
+
+    <div class="infor-itens" id="div-4" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+      data-aos-duration="500">
+      <section id="divConteudo1" class="preço">
+        <h1 class="titulo mr-t-menu">Para Comidas</h1>
+
+        <table>
+          <tr>
+            <th class="nome">Nome</th>
+            <th class="center">Quantidade</th>
+            <th class="center">R$</th>
+          </tr>
+          <tr>
+            <td>Travessa de vidro</td>
+            <td class="center">1</td>
+            <td class="center">10,00</td>
+          </tr>
+          <tr>
+            <td>Travessa de porcelanato</td>
+            <td class="center">1</td>
+            <td class="center">15,00</td>
+          </tr>
+          <tr>
+            <td>Rechaud</td>
+            <td class="center">1</td>
+            <td class="center">20,00</td>
+          </tr>
+          <tr>
+            <td>Colher de servir</td>
+            <td class="center">1</td>
+            <td class="center">3,00</td>
+          </tr>
+          <tr>
+            <td>Pegador para alimentação</td>
+            <td class="center">1</td>
+            <td class="center">3,00</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="divConteudo1" class="preço">
+        <h1 class="titulo mr-t-menu">Fotos</h1>
+        <div class="div-imgs">
+          <a href="https://elpratos.vercel.app/fotos/#TravessaDeVidro"><img
+              src="../fotos/imgs_infor/10-Travessa de vidro.webp" width="180px"></a>
+          <a href="https://elpratos.vercel.app/fotos/#TravessaDePorcelanato"><img
+              src="../fotos/imgs_infor/11-Travessa de porcelanato.webp" width="180px"></a>
+          <br>
+          <a href="https://elpratos.vercel.app/fotos/#Rechaud"><img src="../fotos/imgs_infor/12-Rechaud.webp"
+              width="180px"></a>
+          <a href="https://elpratos.vercel.app/fotos/#ColherDeServir1"><img
+              src="../fotos/imgs_infor/15-Colher de servir 1.webp" width="180px"></a>
+          <br>
+          <a href="https://elpratos.vercel.app/fotos/#ColherDeServir2"><img
+              src="../fotos/imgs_infor/16-Colher de servir 2.webp" width="180px"></a>
+          <a href="https://elpratos.vercel.app/fotos/#Pin%C3%A7aParaAlimenta%C3%A7%C3%A3o"><img
+              src="../fotos/imgs_infor/18-Pinça para alimentação.webp" width="180px"></a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="separador-tudo s3"></div>
+
+  <main class="tela3" id="Simulador">
+    <section class="div-base div-base-img">
+      <div class="div-secundaria center comp">
+        <img src="./imgs/undraw_calculator_re_alsc.svg" class="img-calc">
+      </div>
+
+      <div class="div-secundaria" id="TabelaDePreço">
+        <h1 class="titulo mr-t-menu">Simulador <br>de Preço</h1>
+
+        <table>
+          <tr>
+            <th class="nome">Nome</th>
+            <th class="center">Quant</th>
+            <th class="center">R$</th>
+          </tr>
+          <tr>
+            <td>Prato</td>
+            <td class="center quant"><input type="number" id="inp-Prato" class="quant"></td>
+            <td class="center" id="text-Prato">1,80</td>
+          </tr>
+          <tr>
+            <td class="nome">Prato de sobremesas</td>
+            <td class="center quant"><input type="number" id="inp-PratoDeSobremesas" class="quant"></td>
+            <td class="center" id="text-PratoDeSobremesas">1,20</td>
+          </tr>
+          <tr>
+            <td>Faca inox</td>
+            <td class="center quant"><input type="number" id="inp-Faca" class="quant"></td>
+            <td class="center" id="text-Faca">0,90</td>
+          </tr>
+          <tr>
+            <td>Garfo inox</td>
+            <td class="center quant"><input type="number" id="inp-Garfo" class="quant"></td>
+            <td class="center" id="text-Garfo">0,90</td>
+          </tr>
+          <tr>
+            <td>Colher inox</td>
+            <td class="center quant"><input type="number" id="inp-Colher" class="quant"></td>
+            <td class="center" id="text-Colher">0,90</td>
+          </tr>
+
+          <tr>
+            <td>Taça de vidro</td>
+            <td class="center quant"><input type="number" id="inp-TaçaDeVidro" class="quant"></td>
+            <td class="center" id="text-TaçaDeVidro">1,80</td>
+          </tr>
+          <tr>
+            <td class="nome">Copo de vidro</td>
+            <td class="center quant"><input type="number" id="inp-CopoDeVidro" class="quant"></td>
+            <td class="center" id="text-CopoDeVidro">1,40</td>
+          </tr>
+          <tr>
+            <td class="nome">Xicara e pires</td>
+            <td class="center quant"><input type="number" id="inp-XicaraEPires" class="quant"></td>
+            <td class="center" id="text-XicaraEPires">5,00</td>
+          </tr>
+          <tr>
+            <td class="nome">Jarra e colher de suco</td>
+            <td class="center quant"><input type="number" id="inp-JarraEColherDeSuco" class="quant"></td>
+            <td class="center" id="text-JarraEColherDeSuco">4,00</td>
+          </tr>
+          <tr>
+            <td>Trav. de vidro</td>
+            <td class="center quant"><input type="number" id="inp-TravessaDeVidro" class="quant"></td>
+            <td class="center" id="text-TravessaDeVidro">10,00</td>
+          </tr>
+          <tr>
+            <td>Trav. de porcelanato</td>
+            <td class="center quant"><input type="number" id="inp-TravessaDePorcelanato" class="quant"></td>
+            <td class="center" id="text-TravessaDePorcelanato">15,00</td>
+          </tr>
+          <tr>
+            <td>Rechaud</td>
+            <td class="center quant"><input type="number" id="inp-Rechaud" class="quant"></td>
+            <td class="center" id="text-Rechaud">20,00</td>
+          </tr>
+          <tr>
+            <td>Colher de servir</td>
+            <td class="center quant"><input type="number" id="inp-ColherDeServi" class="quant"></td>
+            <td class="center" id="text-ColherDeServi">3,00</td>
+          </tr>
+          <tr>
+
+            <td>Pegador para alimentação</td>
+            <td class="center quant"><input type="number" id="inp-PegadorParaAlimentacao" class="quant"></td>
+            <td class="center" id="text-PegadorParaAlimentacao">3,00</td>
+          </tr>
+          <tr>
+            <td class="nome">Totais</td>
+            <td class="center quant" id="ttl-quant">0</td>
+            <td class="center" id="ttl-var">0</td>
+          </tr>
+        </table>
+
+        <p id="invalido"></p>
+      </div>
+    </section>
+    <div class="enviar">
+      <button onclick="enviar()">
+        <p>Alugar essa quantidade via WhatsApp</p>
+        <span class="material-symbols-outlined">send</span>
+      </button>
+    </div>
+  </main>
+
+  <footer id="element">
+
+  </footer>
+
+  <script src="hamburger.js"></script>
+  <script src="links.js"></script>
+  <script src="script.js"></script>
+  <script src="rodape.js"></script>
+  <script src="fotos.js"></script>
+  <script src="button.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK796Q3F" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>
