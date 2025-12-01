@@ -145,6 +145,10 @@ svg{
   footer section.top > img{
     margin: 0 0 50px;
   }
+
+  .ads {
+    
+  }
 }
 
 @media (width >= 700px) {

@@ -61,22 +61,6 @@ element.innerHTML = `
     </div>
   </section>
 
-  <section>
-    <h4>ADs</h4>
-    <script>
-    (function(hdhnoyp){
-    var d = document,
-        s = d.createElement('script'),
-        l = d.scripts[d.scripts.length - 1];
-    s.settings = hdhnoyp || {};
-    s.src = "\/\/dead-hour.com\/bYXUVBsud.GAlG0XYeWhcb\/XeomN9RurZHUylIkfP\/T-Y_3FMmToc\/5\/M_DUEettNfjIcgxDNGzhkqwpM\/gt";
-    s.async = true;
-    s.referrerPolicy = 'no-referrer-when-downgrade';
-    l.parentNode.insertBefore(s, l);
-    })({})
-    </script>
-  </section>
-
   <section class="bottom">
     <p class="copyright">Dono, Eledilson Mestre Braga</p>
     <div class="legal">
