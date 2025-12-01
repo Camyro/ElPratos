@@ -38,8 +38,8 @@ element.innerHTML = `
           <div class="links-column">
             <h2>Paginas</h2>
             <a href="https://elpratos.vercel.app/">Pagina principal</a>
-            <a href="https://elpratos.vercel.app/fotos">Fotos das louças</a>
-            <a href="https://elpratos.vercel.app/sobre">Perguntas e sobre</a>
+            <a href="https://elpratos.vercel.app/fotos/">Fotos das louças</a>
+            <a href="https://elpratos.vercel.app/sobre/">Perguntas e sobre</a>
             <a href="https://elpratos.vercel.app/#TabelaDePreçoEDesconto">Tabela de Preço e Desconto</a>
           </div>
           
@@ -64,11 +64,11 @@ element.innerHTML = `
   <section class="bottom">
     <p class="copyright">Dono, Eledilson Mestre Braga</p>
     <div class="legal">
-      <a href="https://c1studios.com.br/" class="Dono">C1Studios</a>
+      <a href="https://c1studios.nl/" class="Dono">C1Studios</a>
       <a class="Dono">&</a>
       <a href="https://elpratos.vercel.app/" class="Dono">El Pratos</a>
-      <a href="https://elpratos.vercel.app/sobre" class="Dono">Sobre</a>
-      <a href="https://elpratos.vercel.app/terms" class="Dono">Termos</a>
-      <a href="https://elpratos.vercel.app/privacy" class="Dono">Privacidade</a>
+      <a href="https://elpratos.vercel.app/sobre/" class="Dono">Sobre</a>
+      <a href="https://elpratos.vercel.app/terms/" class="Dono">Termos</a>
+      <a href="https://elpratos.vercel.app/privacy/" class="Dono">Privacidade</a>
     </div>
   </section>`;
