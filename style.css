@@ -414,15 +414,16 @@ p, th, td{
   width: 100%;
 }
 
-table {
+.table {
   border-collapse: collapse;
-  display: flex;
   background-color: var(--cor-da-div);
   border-radius: 20px;
   padding: 10px;
   justify-content: center;
   margin: 28px 10px;
   box-shadow: var(--borda);
+  display: flex;
+  flex-direction: column;
 }
 
 th, td{

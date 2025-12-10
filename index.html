@@ -53,6 +53,30 @@
   <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
 
   <meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <!-- Firebase -->
+  <script type="module">
+    // Import Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
+    // Configuração
+    const firebaseConfig = {
+      apiKey: "AIzaSyBCZq2yj2l4DtupoKnkTyzwfySNSKvD_6k",
+      authDomain: "c1studios-elpratos.firebaseapp.com",
+      projectId: "c1studios-elpratos",
+      storageBucket: "c1studios-elpratos.firebasestorage.app",
+      messagingSenderId: "623470701062",
+      appId: "1:623470701062:web:afe64603175400ff32f187",
+      measurementId: "G-7LL1FCNFC2"
+    };
+
+    // Inicializar Firebase e deixar disponível globalmente
+    window.firebaseApp = initializeApp(firebaseConfig);
+    window.firebaseAuth = getAuth(window.firebaseApp);
+    window.firebaseDb = getFirestore(window.firebaseApp);
+  </script>
 </head>
 
 <body id="Inicio">
@@ -165,7 +189,7 @@
       <section id="divConteudo1" class="preço">
         <h1 class="titulo mr-t-menu">Pratos</h1>
 
-        <table>
+        <table id="tablePratos">
           <tr>
             <th class="nome">Nome</th>
             <th class="center">Quantidade</th>
@@ -420,7 +444,11 @@
       <div class="div-secundaria" id="TabelaDePreço">
         <h1 class="titulo mr-t-menu">Simulador <br>de Preço</h1>
 
-        <table>
+        <table id="minhaTabela" class="table">
+
+        </table>
+
+        <table class="table">
           <tr>
             <th class="nome">Nome</th>
             <th class="center">Quant</th>
@@ -574,11 +602,13 @@
   </footer>
 
   <script src="hamburger.js"></script>
-  <script src="links.js"></script>
-  <script src="script.js"></script>
   <script src="rodape.js"></script>
   <script src="fotos.js"></script>
   <script src="button.js"></script>
+  <script type="module" src="serve.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsividade.css">
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 

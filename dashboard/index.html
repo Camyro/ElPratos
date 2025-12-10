@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Firebase</title>
+
+  <!-- Firebase -->
+  <script type="module">
+    // Import Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
+    // Configuração
+    const firebaseConfig = {
+      apiKey: "AIzaSyBCZq2yj2l4DtupoKnkTyzwfySNSKvD_6k",
+      authDomain: "c1studios-elpratos.firebaseapp.com",
+      projectId: "c1studios-elpratos",
+      storageBucket: "c1studios-elpratos.firebasestorage.app",
+      messagingSenderId: "623470701062",
+      appId: "1:623470701062:web:afe64603175400ff32f187",
+      measurementId: "G-7LL1FCNFC2"
+    };
+
+    // Inicializar Firebase e deixar disponível globalmente
+    window.firebaseApp = initializeApp(firebaseConfig);
+    window.firebaseAuth = getAuth(window.firebaseApp);
+    window.firebaseDb = getFirestore(window.firebaseApp);
+  </script>
+
+  <!-- Seu JS de login -->
+  <script type="module" src="script.js"></script>
+
+  <style>
+  .modal-edicao {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+  }
+
+  .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+      position: relative;
+  }
+
+  .modal-content h2 {
+      margin-top: 0;
+  }
+
+  .modal-content label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+  }
+
+  .modal-content input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+  }
+
+  .modal-content button {
+      margin-top: 15px;
+      margin-right: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background: #007bff;
+      color: white;
+  }
+
+  .modal-content button:hover {
+      background: #0056b3;
+  }
+
+  .modal-content .fechar {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      color: #333;
+      font-size: 24px;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+  }
+
+  .div-base:hover {
+      background: #f0f0f0;
+      transform: scale(1.02);
+      transition: all 0.2s;
+  }
+  </style>
+
+  <style>
+  /* Modal de edição */
+  .modal-edicao {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+  }
+
+  .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+      position: relative;
+  }
+
+  .modal-content h2 {
+      margin-top: 0;
+  }
+
+  .modal-content label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+  }
+
+  .modal-content input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+  }
+
+  .modal-content button {
+      margin-top: 15px;
+      margin-right: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background: #007bff;
+      color: white;
+  }
+
+  .modal-content button:hover {
+      opacity: 0.9;
+  }
+
+  .modal-content .fechar {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      color: #333;
+      font-size: 24px;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+  }
+
+  /* Modal de confirmação */
+  .modal-confirmacao {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      animation: fadeIn 0.2s;
+  }
+
+  .confirmacao-content {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      animation: slideDown 0.3s;
+  }
+
+  .confirmacao-content h3 {
+      margin-top: 0;
+      color: #ff9800;
+      font-size: 24px;
+  }
+
+  .confirmacao-content p {
+      font-size: 16px;
+      color: #333;
+      margin: 20px 0;
+  }
+
+  .confirmacao-content button {
+      margin: 5px;
+      padding: 12px 30px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      transition: transform 0.2s;
+  }
+
+  .confirmacao-content button:hover {
+      transform: scale(1.05);
+  }
+
+  /* Toast de mensagens */
+  .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 15px 25px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      z-index: 3000;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s;
+  }
+
+  .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  .toast-sucesso {
+      background: #28a745;
+  }
+
+  .toast-erro {
+      background: #dc3545;
+  }
+
+  /* Animações */
+  @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+  }
+
+  @keyframes slideDown {
+      from {
+          opacity: 0;
+          transform: translateY(-50px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  .div-base:hover {
+      background: #f0f0f0;
+      transform: scale(1.02);
+      transition: all 0.2s;
+  }
+  </style>
+</head>
+<body>
+
+  <h2>Login</h2>
+  <button onclick="logout()">Sair</button>
+    <button onclick="abrirCriacaoItem()">➕ Criar Novo Item</button>
+
+  <div id="element"></div>
+
+</body>
+</html>

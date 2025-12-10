@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Firebase</title>
+
+  <!-- Firebase -->
+  <script type="module">
+    // Import Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+
+    // Configuração
+    const firebaseConfig = {
+      apiKey: "AIzaSyBCZq2yj2l4DtupoKnkTyzwfySNSKvD_6k",
+      authDomain: "c1studios-elpratos.firebaseapp.com",
+      projectId: "c1studios-elpratos",
+      storageBucket: "c1studios-elpratos.firebasestorage.app",
+      messagingSenderId: "623470701062",
+      appId: "1:623470701062:web:afe64603175400ff32f187",
+      measurementId: "G-7LL1FCNFC2"
+    };
+
+    // Inicializar Firebase e deixar disponível globalmente
+    window.firebaseApp = initializeApp(firebaseConfig);
+    window.firebaseAuth = getAuth(window.firebaseApp);
+  </script>
+
+  <!-- Seu JS de login -->
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+
+  <h2>Login</h2>
+
+  <input id="email" type="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Senha">
+  <button onclick="login()">Entrar</button>
+
+</body>
+</html>
