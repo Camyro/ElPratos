@@ -18,12 +18,14 @@ async function carregarTabelaItens(idTabela) {
 
         const dados = docSnap.data();
         const tabela = document.querySelector(`#${idTabela}`);
-        const tablePratos = document.querySelector("tablePratos");
+        let type1 = document.getElementById("type1");
+        let type1p = document.getElementById("type1p");
+        let type1d = document.getElementById("type1d");
 
         if (!tabela) {
             console.error(`Tabela com id "${idTabela}" não encontrada!`);
             return null;
-        }:
+        }
 
         // Limpa os dados anteriores
         dadosItens = {};
@@ -67,8 +69,62 @@ async function carregarTabelaItens(idTabela) {
                 <td class="center" id="text-${id}">0.00</td>
                 <td style="display:none;" id="total-${id}">${item.total || 0}</td>
             `;
-
+            
             tabela.appendChild(tr);
+
+            const trP = document.createElement('tr');
+            trP.innerHTML = `
+                <td>${item.name}</td>
+                <td>1</td>
+                <td>${item.valor.toString().replace('.', ',')}</td>
+            `;
+
+            const trD = document.createElement('tr');
+            trD.innerHTML = `
+                <td>${item.name}</td>
+                <td>${item.itensDesconto} ou mais</td>
+                <td>${item.desconto.toString().replace('.', ',')}</td>
+            `;
+
+            if (!type1p) {
+                type1p = document.createElement('table');
+                type1p.id = 'type1p';
+                type1p.innerHTML = `
+                    <tr>
+                        <th class="nome">Nome</th>
+                        <th class="center">Quant</th>
+                        <th class="center">R$</th>
+                    </tr>
+                `;
+                type1.appendChild(type1p);
+            }
+
+            if (!type1d) {
+                if (item.desconto != 0) {
+                    type1.insertAdjacentHTML('beforeend', `<h1>Descontos</h1>`);
+                    type1d = document.createElement('table');
+                    type1d.id = 'type1d';
+                    type1d.innerHTML = `
+                        <tr>
+                            <th class="nome">Nome</th>
+                            <th class="center">Quant</th>
+                            <th class="center">R$</th>
+                        </tr>
+                    `;
+                    type1.appendChild(type1d);
+                }
+
+            }
+
+            if (item.desconto != 0) {  
+                if (item.type == 1) {
+                    type1d.appendChild(trD);
+                }              
+            }
+
+            if (item.type == 1) {
+                type1p.appendChild(trP);
+            }
         });
 
         // Adiciona linha de totais
@@ -216,7 +272,7 @@ function calcularValorItem(chave, quantidade) {
         console.log(`💵 ${item.name}: ${quantidade} × ${item.valor} (sem desconto progressivo) = ${resultado.toFixed(2)}`);
     } 
     // Se quantidade MAIOR que itensDesconto, usa desconto
-    else if (quantidade > item.itensDesconto) {
+    else if (quantidade >= item.itensDesconto) {
         resultado = quantidade * item.desconto;
         console.log(`💰 ${item.name}: ${quantidade} × ${item.desconto} (desconto) = ${resultado.toFixed(2)}`);
     } 
