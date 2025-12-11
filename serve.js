@@ -450,7 +450,7 @@ function enviar() {
     const link = window.linkCalculado || "";
 
     if (link !== "") {
-        const linkCompleto = "https://elpratos.vercel.app/mensagem/" + link;
+        const linkCompleto = "mensagem/" + link;
         window.location.href = linkCompleto;
     } else {
         const elementoInvalido = document.getElementById("invalido");

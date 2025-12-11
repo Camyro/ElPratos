@@ -211,7 +211,8 @@ function enviar() {
             invalidoElement.innerHTML = "";
         }
 
-        window.location.href = link;
+        window.open(link);
+        window.location.href = '../';
     }
 }
 
