@@ -18,9 +18,22 @@ async function carregarTabelaItens(idTabela) {
 
         const dados = docSnap.data();
         const tabela = document.querySelector(`#${idTabela}`);
+
         let type1 = document.getElementById("type1");
         let type1p = document.getElementById("type1p");
         let type1d = document.getElementById("type1d");
+
+        let type2 = document.getElementById("type2");
+        let type2p = document.getElementById("type2p");
+        let type2d = document.getElementById("type2d");
+
+        let type3 = document.getElementById("type3");
+        let type3p = document.getElementById("type3p");
+        let type3d = document.getElementById("type3d");
+
+        let type4 = document.getElementById("type4");
+        let type4p = document.getElementById("type4p");
+        let type4d = document.getElementById("type4d");
 
         if (!tabela) {
             console.error(`Tabela com id "${idTabela}" não encontrada!`);
@@ -72,6 +85,20 @@ async function carregarTabelaItens(idTabela) {
             
             tabela.appendChild(tr);
 
+            verificar(document.getElementById(`type${item.type}`), document.getElementById(`type${item.type}p`), document.getElementById(`type${item.type}d`), item.type);
+
+            type1p = document.getElementById("type1p");
+            type1d = document.getElementById("type1d");
+
+            type2p = document.getElementById("type2p");
+            type2d = document.getElementById("type2d");
+
+            type3p = document.getElementById("type3p");
+            type3d = document.getElementById("type3d");
+
+            type4p = document.getElementById("type4p");
+            type4d = document.getElementById("type4d");
+
             const trP = document.createElement('tr');
             trP.innerHTML = `
                 <td>${item.name}</td>
@@ -86,44 +113,93 @@ async function carregarTabelaItens(idTabela) {
                 <td>${item.desconto.toString().replace('.', ',')}</td>
             `;
 
-            if (!type1p) {
-                type1p = document.createElement('table');
-                type1p.id = 'type1p';
-                type1p.innerHTML = `
-                    <tr>
-                        <th class="nome">Nome</th>
-                        <th class="center">Quant</th>
-                        <th class="center">R$</th>
-                    </tr>
-                `;
-                type1.appendChild(type1p);
-            }
-
-            if (!type1d) {
-                if (item.desconto != 0) {
-                    type1.insertAdjacentHTML('beforeend', `<h1>Descontos</h1>`);
-                    type1d = document.createElement('table');
-                    type1d.id = 'type1d';
-                    type1d.innerHTML = `
+            function verificar(type, typep, typed, number) {
+                if (!typep) {
+                    typep = document.createElement('table');
+                    typep.id = `type${number}p`;
+                    typep.innerHTML = `
                         <tr>
                             <th class="nome">Nome</th>
                             <th class="center">Quant</th>
                             <th class="center">R$</th>
                         </tr>
                     `;
-                    type1.appendChild(type1d);
+                    type.appendChild(typep);
                 }
-
+                if (!typed) {
+                    if (item.desconto != 0) {
+                        type.insertAdjacentHTML('beforeend', `<h1>Descontos</h1>`);
+                        typed = document.createElement('table');
+                        typed.id = `type${number}d`;
+                        typed.innerHTML = `
+                            <tr>
+                                <th class="nome">Nome</th>
+                                <th class="center">Quant</th>
+                                <th class="center">R$</th>
+                            </tr>
+                        `;
+                        type.appendChild(typed);
+                    }
+                }
             }
+
+            // if (!type1p) {
+            //     type1p = document.createElement('table');
+            //     type1p.id = 'type1p';
+            //     type1p.innerHTML = `
+            //         <tr>
+            //             <th class="nome">Nome</th>
+            //             <th class="center">Quant</th>
+            //             <th class="center">R$</th>
+            //         </tr>
+            //     `;
+            //     type1.appendChild(type1p);
+            // }
+            // if (!type1d) {
+            //     if (item.desconto != 0) {
+            //         type1.insertAdjacentHTML('beforeend', `<h1>Descontos</h1>`);
+            //         type1d = document.createElement('table');
+            //         type1d.id = 'type1d';
+            //         type1d.innerHTML = `
+            //             <tr>
+            //                 <th class="nome">Nome</th>
+            //                 <th class="center">Quant</th>
+            //                 <th class="center">R$</th>
+            //             </tr>
+            //         `;
+            //         type1.appendChild(type1d);
+            //     }
+            // }
 
             if (item.desconto != 0) {  
                 if (item.type == 1) {
                     type1d.appendChild(trD);
-                }              
+                }
+                if (item.type == 2) {
+                    type2d.appendChild(trD);
+                }
+                if (item.type == 3) {
+                    type3d.appendChild(trD);
+                }
+                if (item.type == 4) {
+                    type4d.appendChild(trD);
+                }
             }
 
             if (item.type == 1) {
                 type1p.appendChild(trP);
+            }
+
+            if (item.type == 2) {
+                type2p.appendChild(trP);
+            }
+
+            if (item.type == 3) {
+                type3p.appendChild(trP);
+            }
+
+            if (item.type == 4) {
+                type4p.appendChild(trP);
             }
         });
 
