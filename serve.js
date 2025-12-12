@@ -1,3 +1,5 @@
+// If it it works, don't fix it
+
 import { doc, getDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
 const db = window.firebaseDb;
@@ -12,33 +14,26 @@ async function carregarTabelaItens(idTabela) {
         const docSnap = await getDoc(doc(db, "principal", "itens"));
 
         if (!docSnap.exists()) {
-            console.log("Documento não encontrado!");
+            console.error("Documento não encontrado!");
             return null;
         }
-
+        
+        // Dados do documento e da tabela
         const dados = docSnap.data();
         const tabela = document.querySelector(`#${idTabela}`);
 
-        let type1 = document.getElementById("type1");
+        // Referências para tabelas de preços e descontos
         let type1p = document.getElementById("type1p");
         let type1d = document.getElementById("type1d");
 
-        let type2 = document.getElementById("type2");
         let type2p = document.getElementById("type2p");
         let type2d = document.getElementById("type2d");
 
-        let type3 = document.getElementById("type3");
         let type3p = document.getElementById("type3p");
         let type3d = document.getElementById("type3d");
 
-        let type4 = document.getElementById("type4");
         let type4p = document.getElementById("type4p");
         let type4d = document.getElementById("type4d");
-
-        if (!tabela) {
-            console.error(`Tabela com id "${idTabela}" não encontrada!`);
-            return null;
-        }
 
         // Limpa os dados anteriores
         dadosItens = {};
@@ -83,10 +78,12 @@ async function carregarTabelaItens(idTabela) {
                 <td style="display:none;" id="total-${id}">${item.total || 0}</td>
             `;
             
-            tabela.appendChild(tr);
+            tabela.appendChild(tr); // Adiciona a linha à tabela no final do elemento
 
+            // Verifica e cria tabelas de preços e descontos conforme o tipo
             verificar(document.getElementById(`type${item.type}`), document.getElementById(`type${item.type}p`), document.getElementById(`type${item.type}d`), item.type);
 
+            // Atualiza as referências após possível criação
             type1p = document.getElementById("type1p");
             type1d = document.getElementById("type1d");
 
@@ -98,14 +95,16 @@ async function carregarTabelaItens(idTabela) {
 
             type4p = document.getElementById("type4p");
             type4d = document.getElementById("type4d");
-
+            
+            // Cria a linha de preço normal
             const trP = document.createElement('tr');
             trP.innerHTML = `
                 <td>${item.name}</td>
                 <td>1</td>
                 <td>${item.valor.toString().replace('.', ',')}</td>
             `;
-
+            
+            // Cria a linha de desconto
             const trD = document.createElement('tr');
             trD.innerHTML = `
                 <td>${item.name}</td>
@@ -113,6 +112,7 @@ async function carregarTabelaItens(idTabela) {
                 <td>${item.desconto.toString().replace('.', ',')}</td>
             `;
 
+            // Função para verificar e criar tabelas de preços e descontos
             function verificar(type, typep, typed, number) {
                 if (!typep) {
                     typep = document.createElement('table');
@@ -124,8 +124,9 @@ async function carregarTabelaItens(idTabela) {
                             <th class="center">R$</th>
                         </tr>
                     `;
-                    type.appendChild(typep);
+                    type.appendChild(typep); // Adiciona a tabela de preços no final do elemento
                 }
+                // Verifica tabela de descontos
                 if (!typed) {
                     if (item.desconto != 0) {
                         type.insertAdjacentHTML('beforeend', `<h1>Descontos</h1>`);
@@ -138,39 +139,12 @@ async function carregarTabelaItens(idTabela) {
                                 <th class="center">R$</th>
                             </tr>
                         `;
-                        type.appendChild(typed);
+                        type.appendChild(typed); // Adiciona a tabela de descontos no final do elemento
                     }
                 }
             }
-
-            // if (!type1p) {
-            //     type1p = document.createElement('table');
-            //     type1p.id = 'type1p';
-            //     type1p.innerHTML = `
-            //         <tr>
-            //             <th class="nome">Nome</th>
-            //             <th class="center">Quant</th>
-            //             <th class="center">R$</th>
-            //         </tr>
-            //     `;
-            //     type1.appendChild(type1p);
-            // }
-            // if (!type1d) {
-            //     if (item.desconto != 0) {
-            //         type1.insertAdjacentHTML('beforeend', `<h1>Descontos</h1>`);
-            //         type1d = document.createElement('table');
-            //         type1d.id = 'type1d';
-            //         type1d.innerHTML = `
-            //             <tr>
-            //                 <th class="nome">Nome</th>
-            //                 <th class="center">Quant</th>
-            //                 <th class="center">R$</th>
-            //             </tr>
-            //         `;
-            //         type1.appendChild(type1d);
-            //     }
-            // }
-
+            
+            // Adiciona à tabela de descontos se houver desconto
             if (item.desconto != 0) {  
                 if (item.type == 1) {
                     type1d.appendChild(trD);
@@ -185,7 +159,8 @@ async function carregarTabelaItens(idTabela) {
                     type4d.appendChild(trD);
                 }
             }
-
+            
+            // Adiciona à tabela de preços normais
             if (item.type == 1) {
                 type1p.appendChild(trP);
             }
@@ -213,10 +188,6 @@ async function carregarTabelaItens(idTabela) {
         `;
         tabela.appendChild(trTotais);
 
-        console.log("✅ Tabela carregada!");
-        console.log("📦 Dados dos itens:", dadosItens);
-        console.log("🔑 Lista de chaves:", listaChaves);
-
         // Adiciona event listeners
         adicionarCalculoAutomatico();
         adicionarValidacoes();
@@ -224,7 +195,7 @@ async function carregarTabelaItens(idTabela) {
         return true;
 
     } catch (error) {
-        console.error("❌ Erro ao carregar tabela:", error);
+        console.error("Erro ao carregar tabela:", error);
         return null;
     }
 }
@@ -232,8 +203,6 @@ async function carregarTabelaItens(idTabela) {
 // Função para adicionar listeners
 function adicionarCalculoAutomatico() {
     const inputs = document.querySelectorAll('input.quant');
-
-    console.log(`🔗 Adicionando listeners a ${inputs.length} inputs`);
 
     inputs.forEach(input => {
         input.addEventListener('input', calcularTotais);
@@ -331,7 +300,7 @@ function calcularValorItem(chave, quantidade) {
     const item = dadosItens[chave];
 
     if (!item) {
-        console.error(`❌ Item ${chave} não encontrado!`);
+        console.error(`Item ${chave} não encontrado!`);
         return 0;
     }
 
@@ -345,17 +314,14 @@ function calcularValorItem(chave, quantidade) {
     if (item.itensDesconto === 0) {
         // Usa sempre o valor normal
         resultado = quantidade * item.valor;
-        console.log(`💵 ${item.name}: ${quantidade} × ${item.valor} (sem desconto progressivo) = ${resultado.toFixed(2)}`);
     } 
-    // Se quantidade MAIOR que itensDesconto, usa desconto
+    // Se quantidade MAIOR OU IGUAL que itensDesconto, usa desconto
     else if (quantidade >= item.itensDesconto) {
         resultado = quantidade * item.desconto;
-        console.log(`💰 ${item.name}: ${quantidade} × ${item.desconto} (desconto) = ${resultado.toFixed(2)}`);
     } 
     // Senão, usa valor normal
     else {
         resultado = quantidade * item.valor;
-        console.log(`💵 ${item.name}: ${quantidade} × ${item.valor} (normal) = ${resultado.toFixed(2)}`);
     }
 
     return resultado;
@@ -363,8 +329,6 @@ function calcularValorItem(chave, quantidade) {
 
 // Função para calcular os totais
 function calcularTotais() {
-    console.log("🧮 ===== CALCULANDO TOTAIS =====");
-
     let totalQuantidade = 0;
     let totalValor = 0;
     let link = "";
@@ -374,11 +338,11 @@ function calcularTotais() {
         const input = document.querySelector(`#inp-${chave}`);
 
         if (!input) {
-            console.error(`❌ Input não encontrado: inp-${chave}`);
+            console.error(`Input não encontrado: inp-${chave}`);
             return;
         }
 
-        let quantidade = parseInt(input.value) || 0;
+        let quantidade = Number(input.value) || 0;
         const item = dadosItens[chave];
 
         if (item) {
@@ -391,7 +355,6 @@ function calcularTotais() {
                 if (totalDisponivel > 0 && quantidade > totalDisponivel) {
                     quantidade = totalDisponivel;
                     input.value = quantidade;
-                    console.log(`⚠️ ${item.name}: Quantidade ajustada para o máximo disponível (${totalDisponivel})`);
                 }
             }
 
@@ -403,9 +366,8 @@ function calcularTotais() {
 
             if (textElement) {
                 textElement.textContent = valorItem.toFixed(2);
-                console.log(`✅ ${item.name}: ${quantidade} unidades = R$ ${valorItem.toFixed(2)}`);
             } else {
-                console.error(`❌ Elemento text-${chave} não encontrado!`);
+                console.error(`Elemento text-${chave} não encontrado!`);
             }
 
             // Soma aos totais
@@ -439,10 +401,6 @@ function calcularTotais() {
     }
 
     window.linkCalculado = link;
-
-    console.log(`📊 TOTAL: ${totalQuantidade} itens = R$ ${totalValor.toFixed(2)}`);
-    console.log("🔗 Link:", link);
-    console.log("🧮 ===== FIM =====\n");
 }
 
 // Função para enviar o link

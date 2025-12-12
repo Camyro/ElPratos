@@ -1,3 +1,5 @@
+// If it it works, don't fix it
+
 const buttons = document.querySelectorAll('.button');
 
 for (const button of buttons) {

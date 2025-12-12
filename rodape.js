@@ -1,3 +1,5 @@
+// If it it works, don't fix it
+
 var element = document.getElementById('element');
 element.innerHTML = `
   <section class="top">
@@ -46,6 +48,7 @@ element.innerHTML = `
           <div class="links-column">
             <h2 class="footerCel">Paginas</h2>
             <a href="https://elpratos.vercel.app/#Simulador">Simulador</a>
+            <a href="https://elpratos.vercel.app/dashboard/">Dashboard</a>
           </div>
           
       <div class="links-column socials-column" id="Contatos">

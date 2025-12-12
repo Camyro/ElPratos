@@ -1,9 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="html">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Firebase</title>
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsividade.css">
+
+  <!-- Fonts and Styles -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5550330300480012" crossorigin="anonymous"></script>
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-89587a1ff923b19df8a6a37179b8327c.css?vsn=d">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
 
   <!-- Firebase -->
   <script type="module">
@@ -99,12 +111,6 @@
       padding: 0;
       width: 30px;
       height: 30px;
-  }
-
-  .div-base:hover {
-      background: #f0f0f0;
-      transform: scale(1.02);
-      transition: all 0.2s;
   }
   </style>
 
@@ -276,21 +282,57 @@
           transform: translateY(0);
       }
   }
-
-  .div-base:hover {
-      background: #f0f0f0;
-      transform: scale(1.02);
-      transition: all 0.2s;
-  }
   </style>
 </head>
 <body>
+    <header class="nav">
+        <div class="div-logo">
+            <img src="../imgs/logo-el_pratos.png" alt="Logo do site" class="logo">
+            <p>El Pratos</p>
+        </div>
 
-  <h2>Login</h2>
-  <button onclick="logout()">Sair</button>
-    <button onclick="abrirCriacaoItem()">➕ Criar Novo Item</button>
+        <div class="hamburger" onclick="evento()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-  <div id="element"></div>
+        <ul class="menu">
+            <li onclick="evento()">
+                <i class="fa-solid fa-house"></i>
+                <a href="../">El Pratos</a>
+            </li>
 
+            <li class="s2"><div class="separador s2"></div></li>
+            <li onclick="evento(), abrirCriacaoItem()" style="cursor: pointer;">
+                <i class="fa-solid fa-plus"></i>
+                <a class="link1">Adicionar um item</a>
+            </li>
+
+            <li class="s2"><div class="separador s2"></div></li>
+            <li onclick="evento(), logout()">
+                <i class="fa-solid fa-arrow-right-from-bracket exit"></i>
+                <a class="link1 exit">Sair</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="capa" id="Inicio">
+      <div class="div-text">
+        <p class="titulo e">Dashboard<c>.</c></p>
+      </div>
+      <div class="separador-tudo"></div>
+      <div class="div-text">
+        <p class="text e">El Pratos - Locação</p>
+      </div>
+    </div>
+
+    <main>
+        <section id="element">
+        
+        </section>
+    </main>
+
+    <script src="../hamburger.js"></script>
 </body>
 </html>
