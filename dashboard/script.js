@@ -18,7 +18,7 @@ function mostrarConfirmacao(mensagem, onConfirmar) {
     modal.className = 'modal-confirmacao';
     modal.innerHTML = `
         <div class="confirmacao-content">
-            <h3>⚠️ Confirmação</h3>
+            <h3>Confirmação</h3>
             <p>${mensagem}</p>
             <div style="margin-top: 20px;">
                 <button onclick="confirmarAcao()" style="background: #28a745;">Sim</button>
@@ -60,28 +60,35 @@ function validarDesconto(desconto, itensDesconto) {
 function abrirCriacaoItem() {
     const modal = document.createElement('div');
     modal.className = 'modal-edicao';
+    modal.id = 'modal-edicao';
     modal.innerHTML = `
-        <div class="modal-content">
+        <div class="modal-content" id="modal-content">
             <h2>Criar Novo Item</h2>
             <button class="fechar" onclick="this.parentElement.parentElement.remove()">✕</button>
 
-            <label>Nome:</label>
+            <label>Nome:<red>*</red></label>
             <input type="text" id="new-name" placeholder="Nome do item">
 
-            <label>Valor:</label>
+            <label>Valor unitário:<red>*</red></label>
             <input type="number" id="new-valor" value="0" step="0.01">
 
-            <label>Desconto:</label>
-            <input type="number" id="new-desconto" value="0" step="0.01">
-
-            <label>Itens Desconto:</label>
-            <input type="number" id="new-itensDesconto" value="0" step="1">
-
-            <label>Total Disponível:</label>
+            <label>Total disponível:<red>*</red></label>
             <input type="number" id="new-total" value="0" step="1">
 
-            <label>Tipo:</label>
-            <input type="number" id="new-type" value="0">
+            <label>Tipo (isso define onde vai ficar localizado o item):<red>*</red></label>
+            <select id="new-type">
+                <option value="0">Selecione o Tipo</option>
+                <option value="1">Pratos</option>
+                <option value="2">Talheres</option>
+                <option value="3">Bebidas</option>
+                <option value="4">Comidas</option>
+            </select>
+
+            <label>Desconto unitário:</label>
+            <input type="number" id="new-desconto" value="0" step="0.01">
+
+            <label>A partir de quantos itens terá o desconto?:</label>
+            <input type="number" id="new-itensDesconto" value="0" step="1">
 
             <div style="margin-top: 20px;">
                 <button onclick="confirmarCriarItem()">Criar</button>
@@ -98,7 +105,7 @@ function confirmarCriarItem() {
     const nome = document.getElementById('new-name').value.trim();
 
     if (!nome) {
-        mostrarMensagem("❌ O nome do item é obrigatório!", "erro");
+        mostrarMensagem("O nome do item é obrigatório!", "erro");
         return;
     }
 
@@ -114,10 +121,18 @@ async function criarNovoItem() {
         const nome = document.getElementById('new-name').value.trim();
         const desconto = document.getElementById('new-desconto').value;
         const itensDesconto = document.getElementById('new-itensDesconto').value;
+        const valor = document.getElementById('new-valor').value;
+        const total = document.getElementById('new-total').value;
+        const type = document.getElementById('new-type').value;
 
         // Validação antes de criar
         if (!validarDesconto(desconto, itensDesconto)) {
-            mostrarMensagem("❌ Desconto e Itens Desconto devem ser ambos 0 ou ambos maior que 0!", "erro");
+            mostrarMensagem("Desconto e Itens Desconto devem ser ambos 0 ou ambos maior que 0!", "erro");
+            return;
+        }
+
+        if (valor <= 0 || total <= 0 || type <= 0 || type > 5) {
+            mostrarMensagem("Valor e total devem ser ambos maior que 0 e o type não pode ta vazio!", "erro");
             return;
         }
 
@@ -140,14 +155,14 @@ async function criarNovoItem() {
 
         console.log("Item criado com sucesso:", chave, novoItem);
 
-        mostrarMensagem("✅ Item criado com sucesso!", "sucesso");
+        mostrarMensagem("Item criado com sucesso!", "sucesso");
 
         document.querySelector('.modal-edicao').remove();
         buscarTodosItens();
 
     } catch (error) {
         console.error("Erro ao criar item:", error);
-        mostrarMensagem("❌ Erro ao criar: " + error.message, "erro");
+        mostrarMensagem("Erro ao criar: " + error.message, "erro");
     }
 }
 
@@ -157,28 +172,35 @@ function abrirEdicao(chave, item) {
 
     const modal = document.createElement('div');
     modal.className = 'modal-edicao';
+    modal.id = 'modal-edicao';
     modal.innerHTML = `
-        <div class="modal-content">
+        <div class="modal-content" id="modal-content">
             <h2>Editar ${item.name}</h2>
             <button class="fechar" onclick="this.parentElement.parentElement.remove()">✕</button>
 
-            <label>Nome:</label>
-            <input type="text" id="edit-name" value="${item.name}">
+            <label>Nome:<red>*</red></label>
+            <input type="text" id="edit-name" placeholder="Nome do item" value="${item.name}">
 
-            <label>Valor:</label>
+            <label>Valor unitário:<red>*</red></label>
             <input type="number" id="edit-valor" value="${item.valor}" step="0.01">
 
-            <label>Desconto:</label>
-            <input type="number" id="edit-desconto" value="${item.desconto}" step="0.01">
-
-            <label>Itens Desconto:</label>
-            <input type="number" id="edit-itensDesconto" value="${item.itensDesconto}" step="1">
-
-            <label>Total Disponível:</label>
+            <label>Total disponível:<red>*</red></label>
             <input type="number" id="edit-total" value="${item.total || 0}" step="1">
 
-            <label>Tipo:</label>
-            <input type="number" id="edit-type" value="${item.type}">
+            <label>Tipo (isso define onde vai ficar localizado o item):<red>*</red></label>
+            <select id="edit-type">
+                <option value="0">Selecione o Tipo</option>
+                <option value="1" ${item.type == 1 ? "selected" : ""}>Pratos</option>
+                <option value="2" ${item.type == 2 ? "selected" : ""}>Talheres</option>
+                <option value="3" ${item.type == 3 ? "selected" : ""}>Bebidas</option>
+                <option value="4" ${item.type == 4 ? "selected" : ""}>Comidas</option>
+            </select>
+
+            <label>Desconto unitário:</label>
+            <input type="number" id="edit-desconto" value="${item.desconto}" step="0.01">
+
+            <label>A partir de quantos itens terá o desconto?:</label>
+            <input type="number" id="edit-itensDesconto" value="${item.itensDesconto}" step="1">
 
             <div style="margin-top: 20px;">
                 <button onclick="confirmarSalvar('${chave}', '${item.name}')">Salvar</button>
@@ -212,10 +234,17 @@ async function salvarEdicao(chave) {
     try {
         const desconto = document.getElementById('edit-desconto').value;
         const itensDesconto = document.getElementById('edit-itensDesconto').value;
+        const valor = document.getElementById('edit-valor').value;
+        const total = document.getElementById('edit-total').value;
+        const type = document.getElementById('edit-type').value;
 
         // Validação antes de salvar
         if (!validarDesconto(desconto, itensDesconto)) {
-            mostrarMensagem("❌ Desconto e Itens Desconto devem ser ambos 0 ou ambos maior que 0!", "erro");
+            mostrarMensagem("Desconto e Itens Desconto devem ser ambos 0 ou ambos maior que 0!", "erro");
+            return;
+        }
+        if (valor <= 0 || total <= 0 || type <= 0 || type > 5) {
+            mostrarMensagem("Valor e total devem ser ambos maior que 0 e o type não pode ta vazio!", "erro");
             return;
         }
 
@@ -236,14 +265,14 @@ async function salvarEdicao(chave) {
         console.log("Salvo com sucesso:", chave, novosDados);
 
         // Mostra mensagem de sucesso
-        mostrarMensagem("✅ Item atualizado com sucesso!", "sucesso");
+        mostrarMensagem("Item atualizado com sucesso!", "sucesso");
 
         document.querySelector('.modal-edicao').remove();
         buscarTodosItens();
 
     } catch (error) {
         console.error("Erro ao salvar:", error);
-        mostrarMensagem("❌ Erro ao salvar: " + error.message, "erro");
+        mostrarMensagem("Erro ao salvar: " + error.message, "erro");
     }
 }
 
@@ -258,14 +287,14 @@ async function excluirItem(chave) {
 
         console.log("Excluído com sucesso:", chave);
 
-        mostrarMensagem("✅ Item excluído com sucesso!", "sucesso");
+        mostrarMensagem("Item excluído com sucesso!", "sucesso");
 
         document.querySelector('.modal-edicao').remove();
         buscarTodosItens();
 
     } catch (error) {
         console.error("Erro ao excluir:", error);
-        mostrarMensagem("❌ Erro ao excluir: " + error.message, "erro");
+        mostrarMensagem("Erro ao excluir: " + error.message, "erro");
     }
 }
 

@@ -1,6 +1,9 @@
 // If it it works, don't fix it
 
-var element = document.getElementById('element');
+var element = document.getElementById('footer');
+if (!element) {
+  var element = document.getElementById('element');
+}
 element.innerHTML = `
   <section class="top">
     <img src="/imgs/logo-el_pratos.png"/>
