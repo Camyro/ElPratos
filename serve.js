@@ -101,7 +101,7 @@ async function carregarTabelaItens(idTabela) {
             trP.innerHTML = `
                 <td>${item.name}</td>
                 <td>1</td>
-                <td>${item.valor.toString().replace('.', ',')}</td>
+                <td>${item.valor.toFixed(2).toString().replace('.', ',')}</td>
             `;
             
             // Cria a linha de desconto
@@ -109,7 +109,7 @@ async function carregarTabelaItens(idTabela) {
             trD.innerHTML = `
                 <td>${item.name}</td>
                 <td>${item.itensDesconto} ou mais</td>
-                <td>${item.desconto.toString().replace('.', ',')}</td>
+                <td>${item.desconto.toFixed(2).toString().replace('.', ',')}</td>
             `;
 
             // Função para verificar e criar tabelas de preços e descontos
@@ -365,7 +365,7 @@ function calcularTotais() {
             const textElement = document.querySelector(`#text-${chave}`);
 
             if (textElement) {
-                textElement.textContent = valorItem.toFixed(2);
+                textElement.textContent = valorItem.toFixed(2).replace(/[^0-9]/g, ',');
             } else {
                 console.error(`Elemento text-${chave} não encontrado!`);
             }
@@ -397,7 +397,7 @@ function calcularTotais() {
     }
 
     if (ttlVar) {
-        ttlVar.textContent = totalValor.toFixed(2);
+        ttlVar.textContent = totalValor.toFixed(2).replace(/[^0-9]/g, ',');
     }
 
     window.linkCalculado = link;
